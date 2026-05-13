@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en" data-theme="dark" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#1c1c1c">
+<meta name="keywords" content="digital agency Johannesburg, brand activation South Africa, event management, digital marketing, content production, web development, community management, Nexus Media">
+<meta name="author" content="Nexus Media">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nexusmedia.co.za/index.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nexus Media",
+  "legalName": "Nexus Popular Culture (Pty) Ltd",
+  "url": "https://nexusmedia.co.za",
+  "logo": "https://nexusmedia.co.za/images/logo.svg",
+  "foundingDate": "2004",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "21 Harley Street, Ferndale",
+    "addressLocality": "Randburg",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+27-11-789-8215",
+    "contactType": "customer service",
+    "email": "info@nexusmedia.co.za",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://instagram.com/nexusmedia",
+    "https://linkedin.com/company/nexusmedia",
+    "https://nexushub.co.za"
+  ],
+  "description": "Communication, branding and digital agency based in Johannesburg. Events, digital marketing, content production, web development and community management.",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": -26.0903,
+      "longitude": 28.0023
+    },
+    "geoRadius": "5000 km"
+  },
+  "knowsAbout": ["Brand Activation", "Digital Marketing", "Event Management", "Content Production", "Web Development", "Community Management"]
+}
+</script>
+<meta property="og:title" content="Nexus Media | Communication, Branding & Digital Agency | Johannesburg">
+<meta property="og:description" content="Nexus Media is a Johannesburg-based communication, branding and digital agency. Events, digital marketing, content production, web development and community management. Est. 2004.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nexusmedia.co.za/index.html">
+<meta property="og:image" content="https://nexusmedia.co.za/images/favicon-512.png">
+<meta property="og:site_name" content="Nexus Media">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nexus Media | Communication, Branding & Digital Agency | Johannesburg">
+<meta name="twitter:description" content="Nexus Media is a Johannesburg-based communication, branding and digital agency. Events, digital marketing, content production, web development and community management. Est. 2004.">
+<meta name="twitter:image" content="https://nexusmedia.co.za/images/favicon-512.png">
+<title>Nexus Media | Communication, Branding & Digital Agency | Johannesburg</title>
+<meta name="description" content="Nexus Media is a Johannesburg-based communication, branding and digital agency. Events, digital marketing, content production, web development and community management. Est. 2004.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=1778668275">
+</head>
+<body>
+
+<!-- Page load transition — CI colour bands that slide away -->
+<div class="page-transition" id="page-transition">
+  <div class="page-transition__band page-transition__band--1"></div>
+  <div class="page-transition__band page-transition__band--2"></div>
+</div>
+
+<section class="hero" id="home">
+  <img class="hero__n-watermark" src="images/nm-icon-gradient.svg" alt="" aria-hidden="true">
+
+  <!-- Nav sits inside hero so it scrolls away with it -->
+  <nav class="nav">
+    <a class="nav__brand" href="index.html">
+      <img class="nav__logo" src="images/logo.svg" alt="Nexus Media">
+    </a>
+    <span class="nav__wordmark">Nexus Media</span>
+    <div class="nav__right">
+      <a class="nav__cta" href="contact.html">Let's Create</a>
+    </div>
+  </nav>
+
+  <!-- Floating service columns — mid-hero, scroll away with page -->
+  <div class="nav__col nav__col--left">
+    <a class="nav__col-link" href="services-brand.html">Brand Identity</a>
+    <a class="nav__col-link" href="services-digital.html">Digital Marketing</a>
+    <a class="nav__col-link" href="services-content.html">Content &amp; Studios</a>
+    <a class="nav__col-link" href="services-web.html">Web &amp; Product</a>
+    <a class="nav__col-link" href="services-events.html">Events &amp; Activations</a>
+    <a class="nav__col-link" href="services-influencer.html">Content Creator &amp; Community</a>
+  </div>
+  <div class="nav__col nav__col--right">
+    <a class="nav__col-link" href="work.html">Work</a>
+    <a class="nav__col-link" href="about.html">About</a>
+    <a class="nav__col-link" href="contact.html">Contact</a>
+  </div>
+
+  <!-- Hero background video + CI colour grade filter
+       Video: youtube.com/shorts/gfVVBz3BRI0
+       To swap: replace gfVVBz3BRI0 in both playlist= and the embed URL -->
+  <div class="hero__bg">
+    <!-- YouTube iframe -->
+    <div class="hero__yt-wrap">
+      <iframe
+        id="hero-yt"
+        src="https://www.youtube.com/embed/gfVVBz3BRI0?autoplay=1&mute=1&loop=1&playlist=gfVVBz3BRI0&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&disablekb=1&fs=0"
+        title="Hero background"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        style="pointer-events:none;">
+      </iframe>
+    </div>
+    <!-- CI colour grade — layered gradients mimicking the 375.studio filter effect -->
+    <div class="hero__grade"></div>
+    <!-- CI gradient fallback behind the iframe -->
+    <div class="hero__bg-fallback"></div>
+  </div>
+
+  <!-- Bottom content row -->
+  <div class="hero__bottom">
+    <h1 class="hero__headline">
+      <span class="gs-line"><span class="gs-line-inner">Built on</span></span>
+      <span class="gs-line"><span class="gs-line-inner"><em>community.</em></span></span>
+      <span class="gs-line"><span class="gs-line-inner">We know which</span></span>
+      <span class="gs-line"><span class="gs-line-inner"><span class="accent">ones matter.</span></span></span>
+    </h1>
+    <div class="hero__meta">
+      <div>Based in Johannesburg</div>
+      <div>Available Across Africa</div>
+      <div>Est. 2005</div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true"><div class="hero__scroll-line"></div></div>
+</section>
+
+<!-- ============================================================
+     STATEMENT — large centred text, word-by-word scroll reveal
+     Sits directly after hero on pure black background
+     ============================================================ -->
+<section class="statement" id="statement">
+  <h2 class="statement__text">
+    <span class="statement__word">We</span>
+    <span class="statement__word">are</span>
+    <span class="statement__word statement__word--accent">Nexus Media,</span>
+    <br>
+    <span class="statement__word">Communication,</span>
+    <span class="statement__word">Branding</span>
+    <span class="statement__word">&amp;</span>
+    <br>
+    <span class="statement__word">Digital</span>
+    <span class="statement__word statement__word--italic">Agency.</span>
+  </h2>
+  <p class="statement__body">
+    We're not your typical agency. We're the ones that grew up in the communities you're trying to reach.
+    A twenty-year legacy in the gaming, tech, pop culture and lifestyle industry ensures that Nexus Media
+    is uniquely positioned to advise your brand on best practices and implementation to effectively engage
+    authentically with communities through viable platforms, published content, bespoke activations and
+    digital media for consistent growth and sustainability.
+  </p>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__wordmark">AOC</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">AMD</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">ASUS</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Samsung</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Corsair</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Gigabyte</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">MSI</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Logitech</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">AOC</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">AMD</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">ASUS</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Samsung</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Corsair</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Gigabyte</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">MSI</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Logitech</span><span class="marquee__sep"></span>
+  </div>
+</div>
+
+
+
+<section class="featured" id="work" style="position:relative;">
+
+  <!-- Sticky heading — sits above first panel, scrolls away as panels come in -->
+  <div class="featured__head">
+    <h2 class="featured__title">Featured</h2>
+    <a class="featured__all" href="work.html">
+      View all
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg>
+    </a>
+  </div>
+
+  <!-- Panel 1 — AOC x Nexus: Tech expo photo -->
+  <a class="feat-panel feat-panel--1" href="work.html" data-cursor-color="purple">
+    <div class="feat-panel__bg">
+      <img src="images/work-01.jpg" alt="AOC x Nexus tech exhibition">
+    </div>
+    <div class="feat-panel__overlay"></div>
+    <div class="feat-panel__inner">
+      <span class="feat-panel__num">01</span>
+      <div class="feat-panel__body">
+        <h3 class="feat-panel__name">Rectron Summit</h3>
+        <div class="feat-panel__tags">
+          <span class="feat-panel__tag">Events</span>
+          <span class="feat-panel__tag">Activation</span>
+          <span class="feat-panel__tag">Exhibition</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Panel 2 — Cricut Activation: Brand activation photo -->
+  <a class="feat-panel feat-panel--2" href="work.html" data-cursor-color="raspberry">
+    <div class="feat-panel__bg">
+      <img src="images/work-02.jpg" alt="Cricut brand activation">
+    </div>
+    <div class="feat-panel__overlay"></div>
+    <div class="feat-panel__inner">
+      <span class="feat-panel__num">02</span>
+      <div class="feat-panel__body">
+        <h3 class="feat-panel__name">Cricut x Comic Con</h3>
+        <div class="feat-panel__tags">
+          <span class="feat-panel__tag">Brand Activation</span>
+          <span class="feat-panel__tag">Events</span>
+          <span class="feat-panel__tag">Community</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Panel 3 — MSI Launch: Product launch photo -->
+  <a class="feat-panel feat-panel--3" href="work.html" data-cursor-color="mint">
+    <div class="feat-panel__bg">
+      <img src="images/work-03.jpg" alt="MSI product launch event">
+    </div>
+    <div class="feat-panel__overlay"></div>
+    <div class="feat-panel__inner">
+      <span class="feat-panel__num">03</span>
+      <div class="feat-panel__body">
+        <h3 class="feat-panel__name">MSI Launch</h3>
+        <div class="feat-panel__tags">
+          <span class="feat-panel__tag">Product Launch</span>
+          <span class="feat-panel__tag">Events</span>
+          <span class="feat-panel__tag">Media</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Panel 4 - TaskCalendar: SaaS product build -->
+  <a class="feat-panel feat-panel--4" href="work.html" data-cursor-color="blue">
+    <div class="feat-panel__bg" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#0d1030 0%,#1a0a30 50%,#0d1030 100%);">
+      <span style="font-family:var(--font-d);font-size:clamp(32px,4vw,64px);font-weight:300;letter-spacing:-0.03em;color:rgba(255,255,255,0.12);text-align:center;line-height:1.1;">TaskCalendar<br>App</span>
+    </div>
+    <div class="feat-panel__overlay"></div>
+    <div class="feat-panel__inner">
+      <span class="feat-panel__num">04</span>
+      <div class="feat-panel__body">
+        <h3 class="feat-panel__name">TaskCalendar</h3>
+        <div class="feat-panel__tags">
+          <span class="feat-panel__tag">SaaS</span>
+          <span class="feat-panel__tag">Web App</span>
+          <span class="feat-panel__tag">Product Design</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</section>
+
+<!-- ============================================================
+     SERVICES - 375.studio style: headline + 3-column category grid
+     ============================================================ -->
+<section class="svc-list" id="services">
+  <div class="svc-list__top">
+    <p class="svc-list__kicker gs-fade">Services</p>
+    <h2 class="svc-list__headline gs-up">
+      We connect brands to audiences through six core disciplines, each one built on twenty years of doing it for real.
+    </h2>
+  </div>
+
+  <div class="svc-list__grid">
+    <!-- Column 1 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Digital Development</h3>
+      <ul class="svc-list__items">
+        <li>App Development</li>
+        <li>Website Development</li>
+        <li>UX / UI Design</li>
+        <li>E-Commerce</li>
+        <li>SEO</li>
+        <li>Information Architecture</li>
+        <li>Gamification</li>
+      </ul>
+    </div>
+    <!-- Column 2 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Business Development</h3>
+      <ul class="svc-list__items">
+        <li>Brand Strategy</li>
+        <li>Brand Architecture</li>
+        <li>Product Development</li>
+        <li>Product Packaging</li>
+        <li>CI Development & Design</li>
+        <li>Solutions Development</li>
+        <li>New Business Consultation</li>
+      </ul>
+    </div>
+    <!-- Column 3 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Media & Content Creation</h3>
+      <ul class="svc-list__items">
+        <li>Video Production</li>
+        <li>Product Shoots</li>
+        <li>3D Design</li>
+        <li>Editorial & Copywriting</li>
+        <li>AI Prompt Creation</li>
+        <li>Content Strategy</li>
+        <li>Media Liaison</li>
+      </ul>
+    </div>
+    <!-- Column 4 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Agency Consultation</h3>
+      <ul class="svc-list__items">
+        <li>Brand Assessment</li>
+        <li>Campaign Management</li>
+        <li>Community Engagement</li>
+        <li>Social Media Strategy</li>
+        <li>Reporting & Analytics</li>
+        <li>Specialist Procurement</li>
+      </ul>
+    </div>
+    <!-- Column 5 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Publishing & Digital Marketing</h3>
+      <ul class="svc-list__items">
+        <li>Brand Engagement</li>
+        <li>Content Management</li>
+        <li>Digital Publishing</li>
+        <li>Social Media Management</li>
+        <li>Digital Advertising</li>
+        <li>Digital Campaigns</li>
+        <li>Campaign Performance</li>
+      </ul>
+    </div>
+    <!-- Column 6 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Events</h3>
+      <ul class="svc-list__items">
+        <li>Corporate Events</li>
+        <li>Trade Shows</li>
+        <li>Product Launches</li>
+        <li>Exhibitions</li>
+        <li>Pop-Up Activations</li>
+        <li>Brand Workshops</li>
+        <li>Event Management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="about-band" id="about">
+  <div class="draw-line" style="position:absolute;top:0;left:var(--pad);right:var(--pad)"></div>
+  <div class="gs-up">
+    <h2 class="about-band__headline">Nexus Media <em>pride ourselves</em> in being a small agile team that pulls off the <em>exceptional.</em> Reach out to see how our team can do that for your brand too.</h2>
+  </div>
+  <div class="about-band__copy gs-up">
+    <p class="about-band__body">We started in 2005 as a pop-culture publication run out of a Randburg living room, covering gaming, comics and tech for South African readers who were not being served anywhere else.</p>
+    <p class="about-band__body">The publication became a community. The community became an audience. The audience became a network. And along the way, we figured out how to help brands plug into all of it, without making it weird.</p>
+    <p class="about-band__body">Small team. We like it that way. Fewer clients, better work, more sleep for everyone.</p>
+    <a class="about-band__link" href="about.html">Read the full story <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg></a>
+  </div>
+</section>
+
+<section class="stats" id="stats">
+  <div class="draw-line" style="margin-bottom:48px"></div>
+  <p class="stats__kicker gs-fade">By the numbers</p>
+  <div class="stats__grid">
+    <div class="stat gs-up"><div class="stat__num"><span data-count="20" data-suffix="+">0</span></div><div class="stat__label">Years in the game</div><div class="stat__desc">Operating since 2005, before creator economy was a phrase.</div></div>
+    <div class="stat gs-up"><div class="stat__num"><span data-count="240" data-suffix="+">0</span></div><div class="stat__label">Brands shipped</div><div class="stat__desc">From full rebrands to one-night activations.</div></div>
+    <div class="stat gs-up"><div class="stat__num"><span data-count="58" data-suffix="M">0</span></div><div class="stat__label">Monthly reach</div><div class="stat__desc">Across owned and partner channels. Real people.</div></div>
+    <div class="stat gs-up"><div class="stat__num"><span data-count="12" data-suffix="">0</span></div><div class="stat__label">Industry awards</div><div class="stat__desc">The ones that actually mean something to us.</div></div>
+  </div>
+</section>
+
+<section class="cta-banner" id="contact-cta" style="position:relative;overflow:hidden;">
+  <img class="cta-banner__n-accent" src="images/nm-icon-gradient.svg" alt="" aria-hidden="true">
+  <div class="draw-line" style="max-width:200px;margin:0 auto 56px"></div>
+  <p class="cta-banner__kicker gs-fade">Ready when you are</p>
+  <h2 class="cta-banner__headline">Got a project that deserves <em>better than average?</em></h2>
+  <div class="cta-banner__actions gs-up">
+    <a class="btn-solid" href="contact.html">Start a project <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg></a>
+    <a class="btn-outline" href="mailto:info@nexusmedia.co.za">info@nexusmedia.co.za</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img class="footer__logo" src="images/logo.svg" alt="Nexus Media">
+      <p>Genuine engagement. Authentic activations. A division of Nexus Popular Culture (Pty) Ltd.</p>
+    </div>
+    <div class="footer__col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h5>Studio</h5>
+      <ul>
+        <li>21 Harley Street</li>
+        <li>Ferndale, Randburg</li>
+        <li>Johannesburg</li>
+        <li><a href="tel:0117898215">(011) 789-8215</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="mailto:info@nexusmedia.co.za">info@nexusmedia.co.za</a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://nexushub.co.za" target="_blank" rel="noopener">Nexus Hub</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer__col"><h5>Legal</h5><ul><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="security.html">Security</a></li></ul></div>
+  </div>
+  <img class="footer__n-icon" src="images/nm-icon-gradient.svg" alt="" aria-hidden="true">
+  <div class="footer__bottom">
+    <span>2026 Nexus Popular Culture (Pty) Ltd</span>
+    <span>Johannesburg, ZA</span>
+  </div>
+</footer>
+
+<script src="js/app.js?v=1778668275"></script>
+</body>
+</html>

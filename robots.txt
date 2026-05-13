@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/events-hero-original.mp4
+
+Sitemap: https://nexusmedia.co.za/sitemap.xml

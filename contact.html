@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en" data-theme="dark" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#1c1c1c">
+<meta name="keywords" content="contact Nexus Media, Johannesburg agency contact, brand activation enquiry">
+<meta name="author" content="Nexus Media">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nexusmedia.co.za/contact.html">
+<meta property="og:title" content="Contact | Nexus Media | Get In Touch">
+<meta property="og:description" content="Get in touch with Nexus Media. Based in Johannesburg, available across Africa. Start your next project with our team.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nexusmedia.co.za/contact.html">
+<meta property="og:image" content="https://nexusmedia.co.za/images/favicon-512.png">
+<meta property="og:site_name" content="Nexus Media">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | Nexus Media | Get In Touch">
+<meta name="twitter:description" content="Get in touch with Nexus Media. Based in Johannesburg, available across Africa. Start your next project with our team.">
+<meta name="twitter:image" content="https://nexusmedia.co.za/images/favicon-512.png">
+<title>Contact | Nexus Media | Get In Touch</title>
+<meta name="description" content="Get in touch with Nexus Media. Based in Johannesburg, available across Africa. Start your next project with our team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=1778668275">
+
+<style>
+/* ============================================================
+   CONTACT PAGE - SPECIFIC STYLES
+   ============================================================ */
+
+.contact-hero {
+  padding: 160px var(--pad) 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+  min-height: 80vh;
+}
+
+.contact-hero__kicker {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-hero__kicker::after {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+.contact-hero__headline {
+  font-family: var(--font-d);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  max-width: 16ch;
+  margin-bottom: 48px;
+}
+.contact-hero__headline em {
+  font-style: italic;
+  font-weight: 200;
+  background: linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding-right: 0.15em;
+}
+
+.contact-details {
+  margin-top: 20px;
+}
+.contact-details__group {
+  margin-bottom: 36px;
+}
+.contact-details__label {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-details__label::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rule);
+}
+.contact-details__value {
+  font-family: var(--font-d);
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 400;
+  color: var(--fg);
+  line-height: 1.6;
+}
+.contact-details__value a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.3s, color 0.3s;
+}
+.contact-details__value a:hover {
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+/* ---- FORM ---- */
+.contact-form {
+  padding-top: 40px;
+}
+
+.form-field {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.form-field label {
+  display: block;
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 10px;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 0;
+  font-family: var(--font-d);
+  font-size: clamp(16px, 1.2vw, 18px);
+  font-weight: 300;
+  color: var(--fg);
+  outline: none;
+  transition: border-color 0.3s;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: var(--purple);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--grey-3);
+  font-weight: 300;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.form-field select {
+  cursor: pointer;
+  color: var(--grey-3);
+}
+.form-field select:valid {
+  color: var(--fg);
+}
+.form-field select option {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-submit {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--font-m);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.form-submit:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+.form-submit svg {
+  transition: transform 0.25s;
+}
+.form-submit:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ---- MAP BAND ---- */
+.contact-map {
+  margin-top: 80px;
+  padding: 80px var(--pad);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.contact-map__text {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  line-height: 2;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .contact-hero { grid-template-columns: 1fr; min-height: auto; padding-top: 120px; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-map { text-align: left; }
+  .contact-map__text { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-transition" id="page-transition">
+  <div class="page-transition__band page-transition__band--1"></div>
+  <div class="page-transition__band page-transition__band--2"></div>
+</div>
+
+<nav class="nav nav--fixed">
+  <a class="nav__brand" href="index.html">
+    <img class="nav__logo" src="images/logo.svg" alt="Nexus Media">
+  </a>
+  <div class="nav__links-sub">
+    <div class="nav__link-wrap">
+      <a class="nav__link-sub" href="work.html">Works</a>
+      <div class="nav__dropdown">
+        <a class="nav__dropdown-item" href="services-brand.html">Brand Identity</a>
+        <a class="nav__dropdown-item" href="services-digital.html">Digital Marketing</a>
+        <a class="nav__dropdown-item" href="services-content.html">Content &amp; Studios</a>
+        <a class="nav__dropdown-item" href="services-web.html">Web &amp; Product</a>
+        <a class="nav__dropdown-item" href="services-events.html">Events &amp; Activations</a>
+        <a class="nav__dropdown-item" href="services-influencer.html">Content Creator &amp; Community</a>
+      </div>
+    </div>
+    <a class="nav__link-sub" href="about.html">About</a>
+    <a class="nav__link-sub" href="contact.html">Contact</a>
+  </div>
+  <div class="nav__right">
+    <a class="nav__cta" href="contact.html">Let's Create</a>
+  </div>
+</nav>
+
+<!-- ── HERO + FORM ── -->
+<section class="contact-hero">
+  <div class="contact-hero__left">
+    <p class="contact-hero__kicker gs-fade">Get in touch</p>
+    <h1 class="contact-hero__headline gs-up">
+      Got a vision? <em>Let's make it happen.</em>
+    </h1>
+
+    <div class="contact-details gs-fade">
+      <div class="contact-details__group">
+        <p class="contact-details__label">Call us</p>
+        <p class="contact-details__value"><a href="tel:0117898215">(011) 789-8215</a></p>
+      </div>
+      <div class="contact-details__group">
+        <p class="contact-details__label">Email</p>
+        <p class="contact-details__value"><a href="mailto:info@nexusmedia.co.za">info@nexusmedia.co.za</a></p>
+      </div>
+      <div class="contact-details__group">
+        <p class="contact-details__label">Visit</p>
+        <p class="contact-details__value">21 Harley Street<br>Ferndale, Randburg<br>Johannesburg</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form gs-fade">
+    <div class="form-row">
+      <div class="form-field">
+        <label for="fname">First name</label>
+        <input type="text" id="fname" name="fname" placeholder="Jane" required>
+      </div>
+      <div class="form-field">
+        <label for="lname">Last name</label>
+        <input type="text" id="lname" name="lname" placeholder="Doe" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="jane@company.co.za" required>
+      </div>
+      <div class="form-field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="+27 ...">
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="service">What are you looking for?</label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Select a service</option>
+        <option value="brand">Brand Identity</option>
+        <option value="digital">Digital Marketing</option>
+        <option value="content">Content &amp; Studios</option>
+        <option value="web">Web &amp; Product</option>
+        <option value="events">Events &amp; Activations</option>
+        <option value="influencer">Content Creator &amp; Community</option>
+        <option value="other">Something else</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="message">Tell us about your project</label>
+      <textarea id="message" name="message" placeholder="Give us a brief overview of what you need..." required></textarea>
+    </div>
+
+    <!-- Honeypot - hidden from real users, catches bots -->
+    <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+      <label for="website">Website</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+    <!-- Timestamp to detect instant bot submissions -->
+    <input type="hidden" id="form-ts" name="form_timestamp" value="">
+
+    <button type="button" class="form-submit" id="submitBtn">
+      Send message
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg>
+    </button>
+    <p id="formStatus" style="font-family:var(--font-m);font-size:12px;margin-top:16px;color:var(--grey-4);display:none;"></p>
+  </div>
+</section>
+
+<!-- ── MAP BAND ── -->
+<section class="contact-map gs-fade">
+  <div>
+    <p class="contact-hero__headline" style="margin-bottom:0;font-size:clamp(26px,3.5vw,48px);">
+      Based in Johannesburg.<br>Available <em>across Africa.</em>
+    </p>
+  </div>
+  <div class="contact-map__text">
+    Based in Johannesburg<br>
+    Available across Africa<br>
+    Est. 2004
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img class="footer__logo" src="images/logo.svg" alt="Nexus Media">
+      <p>Genuine engagement. Authentic activations. A division of Nexus Popular Culture (Pty) Ltd.</p>
+    </div>
+    <div class="footer__col"><h5>Pages</h5><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer__col"><h5>Studio</h5><ul><li>21 Harley Street</li><li>Ferndale, Randburg</li><li>Johannesburg</li><li><a href="tel:0117898215">(011) 789-8215</a></li></ul></div>
+    <div class="footer__col"><h5>Connect</h5><ul><li><a href="mailto:info@nexusmedia.co.za">info@nexusmedia.co.za</a></li><li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://nexushub.co.za" target="_blank" rel="noopener">Nexus Hub</a></li></ul></div>
+  
+    <div class="footer__col"><h5>Legal</h5><ul><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="security.html">Security</a></li></ul></div>
+  </div>
+  <img class="footer__n-icon" src="images/nm-icon-gradient.svg" alt="" aria-hidden="true">
+  <div class="footer__bottom"><span>2026 Nexus Popular Culture (Pty) Ltd</span><span>Johannesburg, ZA</span></div>
+</footer>
+
+<script src="js/app.js?v=1778668275"></script>
+<script>
+(function() {
+  // Set timestamp when form loads (bots submit instantly)
+  var tsField = document.getElementById('form-ts');
+  if (tsField) tsField.value = Date.now();
+
+  var btn = document.getElementById('submitBtn');
+  var status = document.getElementById('formStatus');
+  var submitted = false;
+  var lastSubmit = 0;
+
+  if (!btn) return;
+
+  btn.addEventListener('click', function() {
+    var fname = document.getElementById('fname');
+    var lname = document.getElementById('lname');
+    var email = document.getElementById('email');
+    var service = document.getElementById('service');
+    var message = document.getElementById('message');
+    var honeypot = document.getElementById('website');
+
+    // 1. Honeypot check - if filled, it's a bot
+    if (honeypot && honeypot.value) {
+      status.style.display = 'block';
+      status.style.color = 'var(--grey-4)';
+      status.textContent = 'Message sent successfully.';
+      return; // Silent fail for bots
+    }
+
+    // 2. Timestamp check - reject if submitted within 3 seconds of page load
+    if (tsField && (Date.now() - parseInt(tsField.value)) < 3000) {
+      status.style.display = 'block';
+      status.style.color = '#DE2B89';
+      status.textContent = 'Please wait a moment before submitting.';
+      return;
+    }
+
+    // 3. Rate limiting - prevent rapid resubmission
+    if (Date.now() - lastSubmit < 10000 && lastSubmit > 0) {
+      status.style.display = 'block';
+      status.style.color = '#DE2B89';
+      status.textContent = 'Please wait before submitting again.';
+      return;
+    }
+
+    // 4. Basic validation
+    if (!fname.value.trim() || !lname.value.trim()) {
+      status.style.display = 'block';
+      status.style.color = '#DE2B89';
+      status.textContent = 'Please enter your full name.';
+      return;
+    }
+
+    // Email format check
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+      status.style.display = 'block';
+      status.style.color = '#DE2B89';
+      status.textContent = 'Please enter a valid email address.';
+      return;
+    }
+
+    if (!service.value) {
+      status.style.display = 'block';
+      status.style.color = '#DE2B89';
+      status.textContent = 'Please select a service.';
+      return;
+    }
+
+    if (!message.value.trim() || message.value.trim().length < 10) {
+      status.style.display = 'block';
+      status.style.color = '#DE2B89';
+      status.textContent = 'Please tell us a bit more about your project.';
+      return;
+    }
+
+    // 5. URL spam check - reject if message contains too many URLs
+    var urlCount = (message.value.match(/https?:\/\//g) || []).length;
+    if (urlCount > 2) {
+      status.style.display = 'block';
+      status.style.color = '#DE2B89';
+      status.textContent = 'Your message contains too many links.';
+      return;
+    }
+
+    // 6. Duplicate submission check
+    if (submitted) {
+      status.style.display = 'block';
+      status.style.color = 'var(--grey-4)';
+      status.textContent = 'You have already submitted this form.';
+      return;
+    }
+
+    // All checks passed - send to server
+    lastSubmit = Date.now();
+    btn.disabled = true;
+    btn.style.opacity = '0.5';
+    btn.style.cursor = 'default';
+    btn.textContent = 'Sending...';
+
+    status.style.display = 'block';
+    status.style.color = 'var(--grey-4)';
+    status.textContent = 'Sending your message...';
+
+    fetch('api/contact.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fname: fname.value.trim(),
+        lname: lname.value.trim(),
+        email: email.value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        service: service.value,
+        message: message.value.trim(),
+        website: honeypot ? honeypot.value : '',
+        form_timestamp: tsField ? tsField.value : ''
+      })
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data.success) {
+        submitted = true;
+        status.style.color = '#80E7BC';
+        status.textContent = data.message;
+        // Clear form
+        fname.value = '';
+        lname.value = '';
+        email.value = '';
+        document.getElementById('phone').value = '';
+        service.selectedIndex = 0;
+        message.value = '';
+      } else {
+        status.style.color = '#DE2B89';
+        status.textContent = data.message || 'Something went wrong. Please try again.';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.style.cursor = 'pointer';
+        btn.innerHTML = 'Send message <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg>';
+      }
+    })
+    .catch(function() {
+      status.style.color = '#DE2B89';
+      status.textContent = 'Connection error. Please email us directly at info@nexusmedia.co.za';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      btn.style.cursor = 'pointer';
+      btn.innerHTML = 'Send message <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg>';
+    });
+  });
+})();
+</script>
+</body>
+</html>
