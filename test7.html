@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test 7 - First half CSS</title>
+<style>
+/* ============================================================
+   NEXUS MEDIA — Design System v2
+   Clean. Type-first. No noise.
+   ============================================================ */
+
+:root {
+  --black:     #1c1c1c;
+  --white:     #f2f2f0;
+  --grey-1:    #242424;
+  --grey-2:    #2b2d31;
+  --grey-3:    #555;
+  --grey-4:    #999;
+  --grey-5:    #ccd0d8;
+  --purple:    #9C39D6;
+  --raspberry: #DE2B89;
+  --mint:      #80E7BC;
+  --yellow:    #EBDB00;
+  --blue:      #4A7AED;
+  --indigo:    #2B0D4F;
+  --fg:        #f2f2f0;
+  --bg:        #1c1c1c;
+  --rule:      rgba(242,242,240,0.08);
+  --font-d:    "Afacad Flux", system-ui, sans-serif;
+  --font-m:    "JetBrains Mono","IBM Plex Mono",ui-monospace,monospace;
+  --pad:       clamp(24px, 5vw, 80px);
+  --ease:      cubic-bezier(0.16,1,0.3,1);
+
+  /* Nexus CI gradients (from letterhead N-icon) */
+  --ci-gradient: linear-gradient(135deg, #80E7BC 0%, #6BC5E0 35%, #4A7AED 70%, #5B4AED 100%);
+  --ci-gradient-h: linear-gradient(90deg, #80E7BC 0%, #6BC5E0 35%, #4A7AED 70%, #5B4AED 100%);
+}
+
+[data-theme="light"] {
+  --fg:     #0a0a0a;
+  --bg:     #f4f1ec;
+  --rule:   rgba(10,10,10,0.1);
+  --grey-1: #e8e5e0;
+  --grey-2: #d5d2cd;
+  --grey-3: #b0ada8;
+  --grey-4: #777;
+  --grey-5: #444;
+}
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { font-size:16px; scroll-behavior:auto; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-d);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s, color 0.4s;
+}
+a { color:inherit; text-decoration:none; }
+button { font:inherit; color:inherit; background:none; border:0; }
+img,svg { display:block; max-width:100%; }
+ul { list-style:none; }
+::selection { background:var(--purple); color:white; }
+::-webkit-scrollbar { width:3px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--grey-3); border-radius:2px; }
+
+/* ── PROGRESS ── */
+.progress-bar {
+  position:fixed; top:0; left:0;
+  height:2px; width:0%;
+  background:linear-gradient(90deg, var(--purple), var(--raspberry), var(--yellow), var(--mint), var(--blue));
+  background-size:300% 100%;
+  z-index:1000; pointer-events:none;
+  transition:width 0.1s linear;
+}
+
+
+/* ============================================================
+   PAGE LOAD TRANSITION — CI colour bands
+   Two horizontal bands fill the screen, then slide down to
+   reveal the page beneath. Uses Nexus CI gradient pairs.
+   ============================================================ */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  display: none;
+  flex-direction: column;
+}
+.page-transition.is-active {
+  display: flex;
+}
+
+.page-transition__band {
+  flex: 1;
+  will-change: transform;
+}
+
+/* Top band: Purple to Raspberry */
+.page-transition__band--1 {
+  background: linear-gradient(135deg, var(--purple), var(--raspberry));
+  transform: translateY(0);
+}
+
+/* Bottom band: Blue to Mint */
+.page-transition__band--2 {
+  background: linear-gradient(135deg, var(--blue), var(--mint));
+  transform: translateY(0);
+}
+
+/* ENTRANCE on page load - bands split apart */
+.page-transition.is-exiting .page-transition__band--1 {
+  animation: band-exit-up 1s cubic-bezier(0.76, 0, 0.24, 1) 0.15s forwards;
+}
+.page-transition.is-exiting .page-transition__band--2 {
+  animation: band-exit-down 1s cubic-bezier(0.76, 0, 0.24, 1) 0s forwards;
+}
+
+@keyframes band-exit-up {
+  to { transform: translateY(-105%); }
+}
+@keyframes band-exit-down {
+  to { transform: translateY(105%); }
+}
+
+/* After entrance animation - fully hidden */
+.page-transition.is-done { display: none; }
+
+/* EXIT transition — bands slide back in from off-screen */
+.page-transition.is-entering .page-transition__band--1 {
+  transform: translateY(-105%);
+  animation: band-enter-down 0.6s cubic-bezier(0.76, 0, 0.24, 1) 0s forwards;
+}
+.page-transition.is-entering .page-transition__band--2 {
+  transform: translateY(105%);
+  animation: band-enter-up 0.6s cubic-bezier(0.76, 0, 0.24, 1) 0.05s forwards;
+}
+
+@keyframes band-enter-down {
+  from { transform: translateY(-105%); }
+  to   { transform: translateY(0); }
+}
+@keyframes band-enter-up {
+  from { transform: translateY(105%); }
+  to   { transform: translateY(0); }
+}
+
+/* ============================================================
+   NAV — floating columns over hero, 375.studio style
+   ============================================================ */
+
+/* The nav sits absolute over the hero only — scrolls away with the page.
+   Logo top-left, wordmark centre-top, controls top-right. */
+
+.nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: flex-start;
+  padding: 28px var(--pad);
+}
+
+/* Logo — top left */
+.nav__brand {
+  pointer-events: all;
+  justify-self: start;
+  display: flex; align-items: center;
+  transition: opacity 0.2s;
+}
+.nav__brand:hover { opacity: 0.55; }
+.nav__logo { height: 28px; width: auto; }
+[data-theme="light"] .nav__logo { filter: invert(1); }
+
+/* Wordmark — centre top */
+.nav__wordmark {
+  font-family: var(--font-m);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(242,242,240,0.6);
+  padding-top: 6px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Controls — top right */
+.nav__right {
+  pointer-events: all;
+  display: flex; align-items: center;
+  gap: 12px; justify-self: end;
+}
+.nav__cta {
+  font-family: var(--font-m);
+  font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bg); background: var(--fg);
+  padding: 8px 18px; border-radius: 999px;
+  transition: opacity 0.2s;
+}
+.nav__cta:hover { opacity: 0.8; }
+
+/* Floating vertical link columns — positioned over the hero */
+.nav__col {
+  position: absolute;
+  top: clamp(100px, 28vh, 350px);
+  z-index: 500;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav__col--left  { left: var(--pad); }
+.nav__col--right { right: var(--pad); align-items: flex-end; }
+
+/* Transition only for GSAP entrance — no hidden class needed since nav scrolls away */
+.nav__col { transition: opacity 0.4s var(--ease); }
+
+.nav__col-link {
+  font-family: var(--font-d);
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 300;
+  color: rgba(242,242,240,0.65);
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  transition: color 0.2s;
+  pointer-events: all;
+  display: block;
+}
+.nav__col-link:hover { color: rgba(242,242,240,0.95); }
+
+/* Hide columns on mobile */
+@media (max-width: 768px) {
+  .nav__col { display: none; }
+  .nav__wordmark { display: none; }
+  .nav { grid-template-columns: 1fr auto; }
+}
+
+/* ============================================================
+   HERO — full viewport, headline bottom-left, 375.studio structure
+   ============================================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh; /* svh = small viewport height, accounts for mobile browser chrome */
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 var(--pad) 64px;
+}
+
+/* Full-bleed background */
+.hero__bg {
+  position: absolute; inset: 0; z-index: 0;
+  overflow: hidden;
+}
+.hero__bg video {
+  position: relative;
+  z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.hero__bg img {
+  position: relative; z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+
+/* YouTube iframe — oversized and centred to cover all aspect ratios */
+.hero__yt-wrap {
+  position: absolute; inset: 0;
+  overflow: hidden; z-index: 1;
+}
+.hero__yt-wrap iframe {
+  position: absolute;
+  width: 180vw;
+  height: 180vh;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: 0;
+}
+
+/* CI Colour grade — sits above the video, below the dark overlay
+   Left: Indigo bleeding into Purple (raspberry edge)
+   Right: Mint into Blue
+   Centre: mostly transparent so the video shows through
+   Mix-blend-mode: multiply burns the colour into the footage */
+.hero__grade {
+  position: absolute; inset: 0; z-index: 2;
+  background:
+    /* Yellow → Raspberry: bottom left warm glow */
+    radial-gradient(ellipse at 5% 75%,   rgba(235,219,0,0.35)  0%, transparent 35%),
+    radial-gradient(ellipse at 15% 65%,  rgba(222,43,137,0.55) 0%, transparent 40%),
+    /* Indigo → Purple: top left deep */
+    radial-gradient(ellipse at 0% 30%,   rgba(43,13,79,0.85)   0%, transparent 50%),
+    radial-gradient(ellipse at 12% 40%,  rgba(156,57,214,0.5)  0%, transparent 38%),
+    /* Blue → Cool Mint: right side */
+    radial-gradient(ellipse at 95% 40%,  rgba(74,122,237,0.4)  0%, transparent 42%),
+    radial-gradient(ellipse at 85% 55%,  rgba(128,231,188,0.3) 0%, transparent 38%),
+    /* Edge darkening */
+    radial-gradient(ellipse at 50% 0%,   rgba(28,28,28,0.5)    0%, transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(28,28,28,0.4)    0%, transparent 35%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.hero__grade::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 10% 45%, rgba(156,57,214,0.2) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 45%, rgba(74,122,237,0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 8% 80%,  rgba(235,219,0,0.1)  0%, transparent 30%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.hero__bg-fallback {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 10% 50%, rgba(43,13,79,0.95)   0%, transparent 50%),
+    radial-gradient(ellipse at 25% 60%, rgba(156,57,214,0.5)  0%, transparent 40%),
+    radial-gradient(ellipse at 5% 80%,  rgba(222,43,137,0.35) 0%, transparent 35%),
+    radial-gradient(ellipse at 85% 40%, rgba(74,122,237,0.35) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 60%, rgba(128,231,188,0.2) 0%, transparent 35%),
+    var(--bg);
+  pointer-events: none;
+}
+
+/* Dark overlay — frames the video, ensures headline legibility.
+   Lighter in the centre so the colour-graded footage shows through. */
+.hero__bg::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 3;
+  background:
+    linear-gradient(to top,
+      rgba(28,28,28,0.95) 0%,
+      rgba(28,28,28,0.5)  25%,
+      rgba(28,28,28,0.1)  50%,
+      rgba(28,28,28,0.2)  75%,
+      rgba(28,28,28,0.5)  100%),
+    /* edge vignette */
+    radial-gradient(ellipse at 50% 50%,
+      transparent 40%,
+      rgba(28,28,28,0.4) 100%);
+  pointer-events: none;
+}
+
+/* Bottom content — sits over the overlay */
+.hero__bottom {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-end;
+  gap: 48px;
+}
+
+/* Headline — bottom left, massive */
+.hero__headline {
+  font-family: var(--font-d);
+  font-size: clamp(36px, 5.5vw, 88px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--fg);
+  max-width: 18ch;
+}
+.hero__headline em {
+  font-style: italic;
+  font-weight: 200;
+  color: rgba(242,242,240,0.55);
+}
+.hero__headline .accent {
+  font-style: italic;
+  background: linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Bottom right — location info */
+.hero__meta {
+  font-family: var(--font-m);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(242,242,240,0.55);
+  text-align: right;
+  line-height: 1.9;
+  padding-bottom: 4px;
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: 48px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center; gap: 6px;
+}
+.hero__scroll-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(242,242,240,0.3));
+  animation: scroll-line 2s ease-in-out infinite;
+}
+@keyframes scroll-line {
+  0%,100%{opacity:0.3;transform:scaleY(1)}
+  50%{opacity:0.8;transform:scaleY(0.6)}
+}
+
+/* Service tags — removed from hero, now in nav columns */
+
+@media (max-width: 768px) {
+  .hero { padding: 36px 24px; }
+  .hero__bottom { grid-template-columns: 1fr; gap: 24px; }
+  .hero__meta { text-align: left; }
+  .hero__headline { font-size: clamp(38px, 10vw, 72px); }
+}
+
+/* ============================================================
+   HERO SMOKE-OUT — clip-path scroll effect
+   The hero shrinks from the bottom as user scrolls,
+   revealing black beneath it. GSAP handles this via ScrollTrigger.
+   ============================================================ */
+.hero-clip-wrap {
+  /* Wrapper that GSAP clips to compress hero upward on scroll */
+  overflow: hidden;
+  position: relative;
+}
+
+/* ============================================================
+   STATEMENT — large centred text with word scroll reveal
+   ============================================================ */
+.statement {
+  background: var(--bg);
+  padding: clamp(80px, 10vw, 140px) var(--pad);
+  text-align: center;
+  position: relative;
+}
+
+/* N icon watermark behind statement text */
+.statement__n-bg {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: clamp(350px, 50vw, 700px);
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.statement__text {
+  font-family: var(--font-d);
+  font-size: clamp(24px, 3.2vw, 52px);
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin: 0 auto 56px;
+  max-width: 28ch;
+}
+
+.statement__word {
+  display: inline-block;
+  color: rgba(242,242,240,0.22);
+  margin-right: 0.2em;
+  /* No CSS transition needed — JS lerps per-frame */
+}
+
+.statement__text br + .statement__word { margin-left: 0; }
+
+.statement__word--accent {
+  background: linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  opacity: 0.22;
+}
+
+.statement__word--italic {
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* Body paragraph — JS lerps opacity and translateY */
+.statement__body {
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.75;
+  color: rgba(242,242,240,0.75);
+  max-width: 68ch;
+  margin: 0 auto;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee {
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  padding:28px 0; overflow:hidden; display:flex;
+}
+.marquee__track {
+  display:flex; align-items:center;
+  flex-shrink:0;
+  animation:marquee 32s linear infinite;
+  white-space:nowrap;
+}
+.marquee:hover .marquee__track { animation-play-state:paused; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+.marquee__wordmark {
+  font-family:var(--font-d);
+  font-size:18px; font-weight:400;
+  letter-spacing:0.08em; text-transform:uppercase;
+  color:rgba(242,242,240,0.7);
+  padding:0 40px; flex-shrink:0;
+  transition:color 0.2s;
+}
+.marquee__wordmark:hover { color:rgba(242,242,240,1); }
+[data-theme="light"] .marquee__wordmark { color:rgba(10,10,10,0.5); }
+[data-theme="light"] .marquee__wordmark:hover { color:rgba(10,10,10,0.9); }
+.marquee__logo {
+  height:24px; width:auto;
+  padding:0 40px; flex-shrink:0;
+  filter:brightness(0) invert(0.7);
+  transition:filter 0.2s;
+}
+.marquee__logo:hover { filter:brightness(0) invert(1); }
+[data-theme="light"] .marquee__logo { filter:brightness(0) invert(0.4); }
+[data-theme="light"] .marquee__logo:hover { filter:brightness(0) invert(0.1); }
+.marquee__sep {
+  width:4px; height:4px; border-radius:50%;
+  background:var(--purple); flex-shrink:0; display:inline-block;
+}
+.marquee__sep:nth-child(4n)   { background:var(--raspberry); }
+.marquee__sep:nth-child(6n)   { background:var(--mint); }
+.marquee__sep:nth-child(8n)   { background:var(--yellow); }
+.marquee__sep:nth-child(10n)  { background:var(--blue); }
+
+/* ============================================================
+   FEATURED — 375.studio style panels with parallax
+   ============================================================ */
+
+.featured {
+  background: var(--bg);
+}
+
+/* Heading row — sits above the panels */
+.featured__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 80px var(--pad) 48px;
+}
+
+.featured__title {
+  font-family: var(--font-d);
+  font-size: clamp(52px, 9vw, 140px);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--fg);
+}
+
+.featured__all {
+  font-size: 13px;
+  color: var(--grey-4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--grey-3);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  align-self: flex-end;
+  margin-bottom: 8px;
+}
+.featured__all:hover { color: var(--fg); border-color: var(--fg); }
+.featured__all svg { transition: transform 0.2s var(--ease); }
+.featured__all:hover svg { transform: translate(2px, -2px); }
+
+/* Individual panel */
+.feat-panel {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 90vh;
+  min-height: 560px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  /* Gap between panels — black strip visible like 375.studio */
+  margin-bottom: 12px;
+}
+.feat-panel:last-child { margin-bottom: 0; }
+
+/* Background image / gradient */
+.feat-panel__bg {
+  position: absolute;
+  /* 60% extra height — 30% top and bottom — gives parallax real travel room */
+  top: -30%;
+  bottom: -30%;
+  left: 0; right: 0;
+  z-index: 0;
+  will-change: transform;
+  /* No CSS transition — JS drives transform directly every frame */
+}
+.feat-panel__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CI Brand Gradient pairs per panel */
+/* Panel 1: Indigo → Purple (primary brand gradient) */
+.feat-panel--1 .feat-panel__bg {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(156,57,214,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 70%, rgba(222,43,137,0.2) 0%, transparent 45%),
+    linear-gradient(145deg, #1c1c1c 0%, #2B0D4F 50%, #1c1c1c 100%);
+}
+/* Panel 2: Yellow → Raspberry (warm brand gradient) */
+.feat-panel--2 .feat-panel__bg {
+  background:
+    radial-gradient(ellipse at 25% 50%, rgba(235,219,0,0.2) 0%, transparent 40%),
+    radial-gradient(ellipse at 60% 60%, rgba(222,43,137,0.35) 0%, transparent 45%),
+    linear-gradient(145deg, #1c1c1c 0%, #3a0a22 50%, #1c1c1c 100%);
+}
+/* Panel 3: Blue → Cool Mint (cool brand gradient) */
+.feat-panel--3 .feat-panel__bg {
+  background:
+    radial-gradient(ellipse at 35% 45%, rgba(74,122,237,0.3) 0%, transparent 45%),
+    radial-gradient(ellipse at 65% 65%, rgba(128,231,188,0.2) 0%, transparent 40%),
+    linear-gradient(145deg, #1c1c1c 0%, #0a1a2e 50%, #1c1c1c 100%);
+}
+
+/* Dark overlay — lighter in middle, heavy at bottom for text legibility */
+.feat-panel__overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(28,28,28,0.92) 0%,
+    rgba(28,28,28,0.45) 30%,
+    rgba(28,28,28,0.15) 60%,
+    rgba(28,28,28,0.1)  100%
+  );
+}
+
+/* Content sits bottom-left, number top-left */
+.feat-panel__inner {
+  position: absolute; inset: 0; z-index: 2;
+  padding: 40px var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feat-panel__num {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  align-self: flex-start;
+}
+.feat-panel--1 .feat-panel__num { color: var(--purple); }
+.feat-panel--2 .feat-panel__num { color: var(--raspberry); }
+.feat-panel--3 .feat-panel__num { color: var(--mint); }
+.feat-panel--4 .feat-panel__bg {
+  background:
+    radial-gradient(ellipse at 30% 45%, rgba(74,122,237,0.35) 0%, transparent 45%),
+    radial-gradient(ellipse at 65% 60%, rgba(156,57,214,0.2) 0%, transparent 40%),
+    linear-gradient(145deg, #1c1c1c 0%, #0d1030 50%, #1c1c1c 100%);
+}
+.feat-panel--4 .feat-panel__num { color: var(--blue); }
+
+.feat-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Giant project name — always visible, positioned bottom-left */
+.feat-panel__name {
+  font-family: var(--font-d);
+  font-size: clamp(52px, 8.5vw, 130px);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: white;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Tags — always visible below name */
+.feat-panel__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.feat-panel__tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--font-m);
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(4px);
+  transition: border-color 0.2s, color 0.2s;
+}
+.feat-panel:hover .feat-panel__tag {
+  border-color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.9);
+}
+
+/* Hover lift on images */
+.feat-panel:hover .feat-panel__bg {
+  filter: brightness(1.08);
+  transition: filter 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .feat-panel { height: 75vh; }
+  .feat-panel__name { font-size: clamp(44px, 12vw, 80px); }
+  .featured__title { font-size: clamp(48px, 14vw, 80px); }
+}
+
+/* ============================================================
+   SERVICES LIST — 375.studio style: headline + category columns
+   ============================================================ */
+.svc-list {
+  padding: 120px var(--pad);
+  border-top: 1px solid var(--rule);
+}
+
+.svc-list__top {
+  margin-bottom: 80px;
+}
+
+.svc-list__kicker {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.svc-list__kicker::after {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--purple);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.svc-list__headline {
+  font-family: var(--font-d);
+  font-size: clamp(32px, 5vw, 72px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  max-width: 22ch;
+}
+
+/* 3x2 grid on desktop, 2x3 on tablet, 1-col on mobile */
+.svc-list__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.svc-list__col {
+  padding: 40px 32px 40px 0;
+  border-bottom: 1px solid var(--rule);
+  /* Vertical dividers between columns */
+  border-right: 1px solid var(--rule);
+}
+/* Remove right border on last column per row */
+.svc-list__col:nth-child(3n) { border-right: none; }
+
+.svc-list__cat {
+  font-family: var(--font-d);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Category pill border like 375 */
+.svc-list__cat::after {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.svc-list__col:nth-child(1) .svc-list__cat::after { background: var(--purple); }
+.svc-list__col:nth-child(2) .svc-list__cat::after { background: var(--raspberry); }
+.svc-list__col:nth-child(3) .svc-list__cat::after { background: var(--mint); }
+.svc-list__col:nth-child(4) .svc-list__cat::after { background: var(--blue); }
+.svc-list__col:nth-child(5) .svc-list__cat::after { background: var(--yellow); }
+.svc-list__col:nth-child(6) .svc-list__cat::after { background: var(--raspberry); }
+
+.svc-list__items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.svc-list__items li {
+  font-size: 14px;
+  color: var(--grey-4);
+  font-weight: 300;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+.svc-list__items li:hover { color: var(--fg); }
+
+/* Left padding on non-first columns per row */
+.svc-list__col:nth-child(3n+2),
+.svc-list__col:nth-child(3n) {
+  padding-left: 32px;
+}
+
+@media (max-width: 900px) {
+  .svc-list__grid { grid-template-columns: 1fr 1fr; }
+  .svc-list__col:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .svc-list__col:nth-child(2n) { border-right: none; }
+  .svc-list__col:nth-child(2n) { padding-left: 32px; }
+  .svc-list__col:nth-child(2n+1) { padding-left: 0; }
+  .svc-list { padding: 80px var(--pad); }
+}
+
+@media (max-width: 600px) {
+  .svc-list__grid { grid-template-columns: 1fr; }
+  .svc-list__col { border-right: none !important; padding-left: 0 !important; }
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-band { padding:120px var(--pad); border-top:1px solid var(--rule); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.about-band__headline { font-family:var(--font-d); font-size:clamp(26px,3.2vw,48px); font-weight:300; line-height:1.08; letter-spacing:-.025em; color:var(--fg); }
+.about-band__headline em {
+  font-style:italic;
+  font-weight:200;
+  background:linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.about-band__copy { padding-top:6px; }
+.about-band__body { font-size:clamp(15px,1.2vw,17px); line-height:1.7; color:var(--grey-4); font-weight:300; margin-bottom:18px; }
+.about-band__link { display:inline-flex; align-items:center; gap:8px; font-size:14px; color:var(--grey-4); border-bottom:1px solid var(--grey-3); padding-bottom:2px; margin-top:14px; transition:color .2s,border-color .2s; }
+.about-band__link:hover { color:var(--fg); border-color:var(--fg); }
+.about-band__link svg { transition:transform .2s var(--ease); }
+.about-band__link:hover svg { transform:translate(2px,-2px); }
+@media (max-width:900px) { .about-band { grid-template-columns:1fr; gap:32px; padding:80px var(--pad); } }
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.stats { padding:80px var(--pad); border-top:1px solid var(--rule); }
+.stats__kicker { font-family:var(--font-m); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--grey-4); margin-bottom:48px; }
+.stats__grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--rule); }
+.stat { padding:36px 0; border-right:1px solid var(--rule); padding-right:28px; }
+.stat:last-child { border-right:none; }
+.stat:not(:first-child) { padding-left:28px; }
+.stat__num { font-family:var(--font-d); font-size:clamp(44px,5.5vw,90px); font-weight:300; letter-spacing:-.04em; line-height:1.12; margin-bottom:14px; }
+.stat:nth-child(1) .stat__num { color:var(--purple); }
+.stat:nth-child(2) .stat__num { color:var(--raspberry); }
+.stat:nth-child(3) .stat__num { color:var(--mint); }
+.stat:nth-child(4) .stat__num { color:var(--blue); }
+.stat__label { font-family:var(--font-m); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--grey-4); margin-bottom:7px; }
+.stat__desc { font-size:13px; color:var(--grey-3); line-height:1.5; font-weight:300; max-width:18ch; }
+
+</style>
+</head>
+<body>
+<h1 style="padding:100px 40px;color:white;font-size:48px;">Test 7 - First half of CSS (898 lines)</h1>
+<p style="padding:0 40px;color:#aaa;">If visible, first half CSS is fine.</p>
+</body>
+</html>
