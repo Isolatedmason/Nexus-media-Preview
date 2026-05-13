@@ -1,0 +1,3010 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAHlElEQVR4nLWWa3BV1RXH19r77HPPfeQ+ktybByGEpIanBYZQTCkPkxbEMgpMgzCFsTptgU5HBgki1nFKZ5iOQZwiVhSYouLoVKuYiThOiyDTaWVqqQyikkB45t68bsJ933PP3vvsfrgmJIhoO+36dM6ec/Zvrf/ae62FFRUV8P807Rt+h4iAAID5V6UUKPW/ACASQpSyJReSC1vagEApUl0jRAdEZdsAtyLdCkAoEVxk4ynGmDcU8JcFDa/btjEdNa+FB3PZbgUmZQWEMmXL/wyQFyRzLekLFs5a3lDbWFdcO9YZKNAYUwqsjN3TDu1HkuGTfx243JpJ9GmGH+DmouGXk4yESCGkyWff9/3vrr+3tLoyAK4yzRd0eF3gAMAMZAdkrDOa+/ux0ksnB/tO/+7y6deQGoRoStlfA0BChMV1xpb99uczVzRU8sA05zgfOqXJL164FB0cAICiwqKqqvHMpcUh/eafyakO59l/vNFxfJMQnFD9BsYoiRBRCqEztnr/pjsWzp+eKa9wBS+cu7h97973jx6NRMK5nAkADoejrLy84c7G9WvXPrhw/IUp5uvFTZKELnywhguBhI7UalQESNBK5VY++8slq5bfYVZ5DPfu3c/t2PFULDbgchlM1wkSALCVzS0rk856/YWbN2/Z8ND6rGk+c8ho/dNbXSd+pqgHRgRBrj9Rko2l61YuWLTqnvpctcdwP7r18UeaN2dT8YDfZxhOUGDbtm3boEB3GIVFfmklmjf+YlPzI07DeGiZ1bh4uW/capvHEOmNAESQXBYE/Ys2NNWrb7kdzt/veWHnkzvGVJZ/e84sw+POpjOEDv+GtuREc5eMnzOtfun+Pxzc9cxup6FvaFK3z91E9ZBSfPhKDgEIsVLZSXfX3Vlb7wf3uc7O7du210ysevzVlm1v7XnslV2hivJsKkU0CgCIRPKst3T6jKa3ZzQdmjLrR9t/86v2jovFPvjpysqC8nuUSCKS0RIpAI3MXjzvNigFhP37D0R7u2rq5tKiOQN918ZOqNl8YHfJuEozmSJ06FwoJbiVy3FKaDKR3LdvHwDOm6Zmf2+JxXVEdR2AiJILV8g7c/IMB9BYInHsyFG3xykkdnWJS5cd2aTwVVQ0PfVkqKraTCUIpaCAEHAa6DJQKdvlch479n4yldEI3tU4FfRSZVt5lQgAAILkwl9WVOUfAwrOnTsf6Q5rTNc0GQwJpZF3Xnjz/NlL7tKqpdueLqmeYKYTSDVGschLin1E14Axvbs73Nl5AQBmTi0MFJZJKRCHAAgopfT6fAXEJYXd1x+1rBwiEqp0gxeG2JkP//bixkdTkZjur1zUvLu05nYzFWM6czvQbRBKAAkxzdzVcB8AjCmhJaEA5xJxRA4UgKYocjBzFuccAEAhoUp3So1ZnoD3yulTrb/ekohENc/Y+ev2lNTUmalBXacahbynSkHfNRsADAY+D5FD1Y/kdyeUZOOpbCprmjnidlCdKVshUVQXRBdSWobX391x+r2WDclID+hj6tfsHT9lQTaTUQBKASibUCaJHwCkVGY6jmTkKVKKMm2wJzrYP5DNmoHykL+kSHKBRAHlQDmAbQtheHz9lz49+uy6TM/V2uqJ85asF0Ik0sAlKps7PCXB8moAGBiMhSMRXWdKqaEIlGKMDUYHOto7hBB+X2BC/cxc1gQCHCyOlq1sBLSlcLh9g+GzJ156AJJXAZ0eJ7odQCkVVqa0Zm5NVaFS6syZz3p7IkzXrwPyJ1VwfvyDYzYiTYsFK5Y6PG5b2WhowIiCLy5mntEX6Ti4475ouIMSh8cBjEhF3TMbHqgpVYh4uO0wF1Y+MdeLHSJKKQ2nc9+Bl8cGy64U2M8//9xHB/5YVTdNctnbeSWdjBNK8s2REGrl0i5PsddfAUhi3Z+E6tZt2frE8u/YXeH+BfMWZHMJSumoCL5QaWDg4EsHmNtZOGgtfvAntT9o+FfbX9pPnMxmUpTS4dZr21J3uC0r3X31VFf7keIpSxqbHm6YbAKSHS07+6PdbCgBo6qplNLr9ba9fejwu++UFgdvS5Mfbm2+e+tmt8eVSyUF5/kqhEgAUPCclUk4nca0pdvqV7XcPw/9BcahQ+++cvBFf8AnxfUWPbofIEopqaa17NzVOG/+533dH2vk8qfnPmtrvfLxP1PRPiE4gKKa7gkESyfWl9WtrKyZcf9snFTpPX78wzU/Xi2VOSzOTQAAQAjhlqUx/bEntjUtXdabSnyUyIQtjPXF4uFILp6QAokj4AyMcxeUTCymK+oKfG799Tdamzc+zGVG13XbHtUyb9L0CSFCiFwud+/ypvVr19XW1PRkzfNxszer0hYqSV2Ujilg0ys8pV525fLVlpZdr736suFimqbdsPvNAXmtECERTxQWhxYuvGvxokVTJ0/yFwZ0h4MQAkqmk4lPznze2vbe4ba2/mi3P+BTSqlvOLYMG6WUc55OpaimB4MlZWXlPp8PAePxeKQ70t/XK0TOU+BmTJfyKwevWwHyoRBClFKcW5xzKW0AoIQwnTGmI6Jt2zd1fNi+ZjZVSuW90zTGmD5y/cty/zeAkTve2tOvsn8DQE2eiakPKqUAAAAASUVORK5CYII=">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#1c1c1c">
+<meta name="keywords" content="digital agency Johannesburg, brand activation South Africa, event management, digital marketing, content production, web development, community management, Nexus Media">
+<meta name="author" content="Nexus Media">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nexusmedia.co.za/index.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nexus Media",
+  "legalName": "Nexus Popular Culture (Pty) Ltd",
+  "url": "https://nexusmedia.co.za",
+  "logo": "https://nexusmedia.co.za/images/logo.svg",
+  "foundingDate": "2004",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "21 Harley Street, Ferndale",
+    "addressLocality": "Randburg",
+    "addressRegion": "Gauteng",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+27-11-789-8215",
+    "contactType": "customer service",
+    "email": "info@nexusmedia.co.za",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://instagram.com/nexusmedia",
+    "https://linkedin.com/company/nexusmedia",
+    "https://nexushub.co.za"
+  ],
+  "description": "Communication, branding and digital agency based in Johannesburg. Events, digital marketing, content production, web development and community management.",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": -26.0903,
+      "longitude": 28.0023
+    },
+    "geoRadius": "5000 km"
+  },
+  "knowsAbout": ["Brand Activation", "Digital Marketing", "Event Management", "Content Production", "Web Development", "Community Management"]
+}
+<meta property="og:title" content="Nexus Media | Communication, Branding & Digital Agency | Johannesburg">
+<meta property="og:description" content="Nexus Media is a Johannesburg-based communication, branding and digital agency. Events, digital marketing, content production, web development and community management. Est. 2004.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nexusmedia.co.za/index.html">
+<meta property="og:image" content="https://nexusmedia.co.za/images/favicon-512.png">
+<meta property="og:site_name" content="Nexus Media">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nexus Media | Communication, Branding & Digital Agency | Johannesburg">
+<meta name="twitter:description" content="Nexus Media is a Johannesburg-based communication, branding and digital agency. Events, digital marketing, content production, web development and community management. Est. 2004.">
+<meta name="twitter:image" content="https://nexusmedia.co.za/images/favicon-512.png">
+<title>Nexus Media | Communication, Branding & Digital Agency | Johannesburg</title>
+<meta name="description" content="Nexus Media is a Johannesburg-based communication, branding and digital agency. Events, digital marketing, content production, web development and community management. Est. 2004.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   NEXUS MEDIA — Design System v2
+   Clean. Type-first. No noise.
+   ============================================================ */
+
+:root {
+  --black:     #1c1c1c;
+  --white:     #f2f2f0;
+  --grey-1:    #242424;
+  --grey-2:    #2b2d31;
+  --grey-3:    #555;
+  --grey-4:    #999;
+  --grey-5:    #ccd0d8;
+  --purple:    #9C39D6;
+  --raspberry: #DE2B89;
+  --mint:      #80E7BC;
+  --yellow:    #EBDB00;
+  --blue:      #4A7AED;
+  --indigo:    #2B0D4F;
+  --fg:        #f2f2f0;
+  --bg:        #1c1c1c;
+  --rule:      rgba(242,242,240,0.08);
+  --font-d:    "Afacad Flux", system-ui, sans-serif;
+  --font-m:    "JetBrains Mono","IBM Plex Mono",ui-monospace,monospace;
+  --pad:       clamp(24px, 5vw, 80px);
+  --ease:      cubic-bezier(0.16,1,0.3,1);
+
+  /* Nexus CI gradients (from letterhead N-icon) */
+  --ci-gradient: linear-gradient(135deg, #80E7BC 0%, #6BC5E0 35%, #4A7AED 70%, #5B4AED 100%);
+  --ci-gradient-h: linear-gradient(90deg, #80E7BC 0%, #6BC5E0 35%, #4A7AED 70%, #5B4AED 100%);
+}
+
+[data-theme="light"] {
+  --fg:     #0a0a0a;
+  --bg:     #f4f1ec;
+  --rule:   rgba(10,10,10,0.1);
+  --grey-1: #e8e5e0;
+  --grey-2: #d5d2cd;
+  --grey-3: #b0ada8;
+  --grey-4: #777;
+  --grey-5: #444;
+}
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { font-size:16px; scroll-behavior:auto; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-d);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s, color 0.4s;
+}
+a { color:inherit; text-decoration:none; }
+button { font:inherit; color:inherit; background:none; border:0; }
+img,svg { display:block; max-width:100%; }
+ul { list-style:none; }
+::selection { background:var(--purple); color:white; }
+::-webkit-scrollbar { width:3px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--grey-3); border-radius:2px; }
+
+/* ── PROGRESS ── */
+.progress-bar {
+  position:fixed; top:0; left:0;
+  height:2px; width:0%;
+  background:linear-gradient(90deg, var(--purple), var(--raspberry), var(--yellow), var(--mint), var(--blue));
+  background-size:300% 100%;
+  z-index:1000; pointer-events:none;
+  transition:width 0.1s linear;
+}
+
+
+/* ============================================================
+   PAGE LOAD TRANSITION — CI colour bands
+   Two horizontal bands fill the screen, then slide down to
+   reveal the page beneath. Uses Nexus CI gradient pairs.
+   ============================================================ */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  display: none;
+  flex-direction: column;
+}
+.page-transition.is-active {
+  display: flex;
+}
+
+.page-transition__band {
+  flex: 1;
+  will-change: transform;
+}
+
+/* Top band: Purple to Raspberry */
+.page-transition__band--1 {
+  background: linear-gradient(135deg, var(--purple), var(--raspberry));
+  transform: translateY(0);
+}
+
+/* Bottom band: Blue to Mint */
+.page-transition__band--2 {
+  background: linear-gradient(135deg, var(--blue), var(--mint));
+  transform: translateY(0);
+}
+
+/* ENTRANCE on page load - bands split apart */
+.page-transition.is-exiting .page-transition__band--1 {
+  animation: band-exit-up 1s cubic-bezier(0.76, 0, 0.24, 1) 0.15s forwards;
+}
+.page-transition.is-exiting .page-transition__band--2 {
+  animation: band-exit-down 1s cubic-bezier(0.76, 0, 0.24, 1) 0s forwards;
+}
+
+@keyframes band-exit-up {
+  to { transform: translateY(-105%); }
+}
+@keyframes band-exit-down {
+  to { transform: translateY(105%); }
+}
+
+/* After entrance animation - fully hidden */
+.page-transition.is-done { display: none; }
+
+/* EXIT transition — bands slide back in from off-screen */
+.page-transition.is-entering .page-transition__band--1 {
+  transform: translateY(-105%);
+  animation: band-enter-down 0.6s cubic-bezier(0.76, 0, 0.24, 1) 0s forwards;
+}
+.page-transition.is-entering .page-transition__band--2 {
+  transform: translateY(105%);
+  animation: band-enter-up 0.6s cubic-bezier(0.76, 0, 0.24, 1) 0.05s forwards;
+}
+
+@keyframes band-enter-down {
+  from { transform: translateY(-105%); }
+  to   { transform: translateY(0); }
+}
+@keyframes band-enter-up {
+  from { transform: translateY(105%); }
+  to   { transform: translateY(0); }
+}
+
+/* ============================================================
+   NAV — floating columns over hero, 375.studio style
+   ============================================================ */
+
+/* The nav sits absolute over the hero only — scrolls away with the page.
+   Logo top-left, wordmark centre-top, controls top-right. */
+
+.nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: flex-start;
+  padding: 28px var(--pad);
+}
+
+/* Logo — top left */
+.nav__brand {
+  pointer-events: all;
+  justify-self: start;
+  display: flex; align-items: center;
+  transition: opacity 0.2s;
+}
+.nav__brand:hover { opacity: 0.55; }
+.nav__logo { height: 28px; width: auto; }
+[data-theme="light"] .nav__logo { filter: invert(1); }
+
+/* Wordmark — centre top */
+.nav__wordmark {
+  font-family: var(--font-m);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(242,242,240,0.6);
+  padding-top: 6px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Controls — top right */
+.nav__right {
+  pointer-events: all;
+  display: flex; align-items: center;
+  gap: 12px; justify-self: end;
+}
+.nav__cta {
+  font-family: var(--font-m);
+  font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bg); background: var(--fg);
+  padding: 8px 18px; border-radius: 999px;
+  transition: opacity 0.2s;
+}
+.nav__cta:hover { opacity: 0.8; }
+
+/* Floating vertical link columns — positioned over the hero */
+.nav__col {
+  position: absolute;
+  top: clamp(100px, 28vh, 350px);
+  z-index: 500;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav__col--left  { left: var(--pad); }
+.nav__col--right { right: var(--pad); align-items: flex-end; }
+
+/* Transition only for GSAP entrance — no hidden class needed since nav scrolls away */
+.nav__col { transition: opacity 0.4s var(--ease); }
+
+.nav__col-link {
+  font-family: var(--font-d);
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 300;
+  color: rgba(242,242,240,0.65);
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  transition: color 0.2s;
+  pointer-events: all;
+  display: block;
+}
+.nav__col-link:hover { color: rgba(242,242,240,0.95); }
+
+/* Hide columns on mobile */
+@media (max-width: 768px) {
+  .nav__col { display: none; }
+  .nav__wordmark { display: none; }
+  .nav { grid-template-columns: 1fr auto; }
+}
+
+/* ============================================================
+   HERO — full viewport, headline bottom-left, 375.studio structure
+   ============================================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh; /* svh = small viewport height, accounts for mobile browser chrome */
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 var(--pad) 64px;
+}
+
+/* Full-bleed background */
+.hero__bg {
+  position: absolute; inset: 0; z-index: 0;
+  overflow: hidden;
+}
+.hero__bg video {
+  position: relative;
+  z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.hero__bg img {
+  position: relative; z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+
+/* YouTube iframe — oversized and centred to cover all aspect ratios */
+.hero__yt-wrap {
+  position: absolute; inset: 0;
+  overflow: hidden; z-index: 1;
+}
+.hero__yt-wrap iframe {
+  position: absolute;
+  width: 180vw;
+  height: 180vh;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: 0;
+}
+
+/* CI Colour grade — sits above the video, below the dark overlay
+   Left: Indigo bleeding into Purple (raspberry edge)
+   Right: Mint into Blue
+   Centre: mostly transparent so the video shows through
+   Mix-blend-mode: multiply burns the colour into the footage */
+.hero__grade {
+  position: absolute; inset: 0; z-index: 2;
+  background:
+    /* Yellow → Raspberry: bottom left warm glow */
+    radial-gradient(ellipse at 5% 75%,   rgba(235,219,0,0.35)  0%, transparent 35%),
+    radial-gradient(ellipse at 15% 65%,  rgba(222,43,137,0.55) 0%, transparent 40%),
+    /* Indigo → Purple: top left deep */
+    radial-gradient(ellipse at 0% 30%,   rgba(43,13,79,0.85)   0%, transparent 50%),
+    radial-gradient(ellipse at 12% 40%,  rgba(156,57,214,0.5)  0%, transparent 38%),
+    /* Blue → Cool Mint: right side */
+    radial-gradient(ellipse at 95% 40%,  rgba(74,122,237,0.4)  0%, transparent 42%),
+    radial-gradient(ellipse at 85% 55%,  rgba(128,231,188,0.3) 0%, transparent 38%),
+    /* Edge darkening */
+    radial-gradient(ellipse at 50% 0%,   rgba(28,28,28,0.5)    0%, transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(28,28,28,0.4)    0%, transparent 35%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.hero__grade::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 10% 45%, rgba(156,57,214,0.2) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 45%, rgba(74,122,237,0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 8% 80%,  rgba(235,219,0,0.1)  0%, transparent 30%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.hero__bg-fallback {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 10% 50%, rgba(43,13,79,0.95)   0%, transparent 50%),
+    radial-gradient(ellipse at 25% 60%, rgba(156,57,214,0.5)  0%, transparent 40%),
+    radial-gradient(ellipse at 5% 80%,  rgba(222,43,137,0.35) 0%, transparent 35%),
+    radial-gradient(ellipse at 85% 40%, rgba(74,122,237,0.35) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 60%, rgba(128,231,188,0.2) 0%, transparent 35%),
+    var(--bg);
+  pointer-events: none;
+}
+
+/* Dark overlay — frames the video, ensures headline legibility.
+   Lighter in the centre so the colour-graded footage shows through. */
+.hero__bg::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 3;
+  background:
+    linear-gradient(to top,
+      rgba(28,28,28,0.95) 0%,
+      rgba(28,28,28,0.5)  25%,
+      rgba(28,28,28,0.1)  50%,
+      rgba(28,28,28,0.2)  75%,
+      rgba(28,28,28,0.5)  100%),
+    /* edge vignette */
+    radial-gradient(ellipse at 50% 50%,
+      transparent 40%,
+      rgba(28,28,28,0.4) 100%);
+  pointer-events: none;
+}
+
+/* Bottom content — sits over the overlay */
+.hero__bottom {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-end;
+  gap: 48px;
+}
+
+/* Headline — bottom left, massive */
+.hero__headline {
+  font-family: var(--font-d);
+  font-size: clamp(36px, 5.5vw, 88px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--fg);
+  max-width: 18ch;
+}
+.hero__headline em {
+  font-style: italic;
+  font-weight: 200;
+  color: rgba(242,242,240,0.55);
+}
+.hero__headline .accent {
+  font-style: italic;
+  background: linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Bottom right — location info */
+.hero__meta {
+  font-family: var(--font-m);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(242,242,240,0.55);
+  text-align: right;
+  line-height: 1.9;
+  padding-bottom: 4px;
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: 48px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center; gap: 6px;
+}
+.hero__scroll-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(242,242,240,0.3));
+  animation: scroll-line 2s ease-in-out infinite;
+}
+@keyframes scroll-line {
+  0%,100%{opacity:0.3;transform:scaleY(1)}
+  50%{opacity:0.8;transform:scaleY(0.6)}
+}
+
+/* Service tags — removed from hero, now in nav columns */
+
+@media (max-width: 768px) {
+  .hero { padding: 36px 24px; }
+  .hero__bottom { grid-template-columns: 1fr; gap: 24px; }
+  .hero__meta { text-align: left; }
+  .hero__headline { font-size: clamp(38px, 10vw, 72px); }
+}
+
+/* ============================================================
+   HERO SMOKE-OUT — clip-path scroll effect
+   The hero shrinks from the bottom as user scrolls,
+   revealing black beneath it. GSAP handles this via ScrollTrigger.
+   ============================================================ */
+.hero-clip-wrap {
+  /* Wrapper that GSAP clips to compress hero upward on scroll */
+  overflow: hidden;
+  position: relative;
+}
+
+/* ============================================================
+   STATEMENT — large centred text with word scroll reveal
+   ============================================================ */
+.statement {
+  background: var(--bg);
+  padding: clamp(80px, 10vw, 140px) var(--pad);
+  text-align: center;
+  position: relative;
+}
+
+/* N icon watermark behind statement text */
+.statement__n-bg {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: clamp(350px, 50vw, 700px);
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.statement__text {
+  font-family: var(--font-d);
+  font-size: clamp(24px, 3.2vw, 52px);
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin: 0 auto 56px;
+  max-width: 28ch;
+}
+
+.statement__word {
+  display: inline-block;
+  color: rgba(242,242,240,0.22);
+  margin-right: 0.2em;
+  /* No CSS transition needed — JS lerps per-frame */
+}
+
+.statement__text br + .statement__word { margin-left: 0; }
+
+.statement__word--accent {
+  background: linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  opacity: 0.22;
+}
+
+.statement__word--italic {
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* Body paragraph — JS lerps opacity and translateY */
+.statement__body {
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.75;
+  color: rgba(242,242,240,0.75);
+  max-width: 68ch;
+  margin: 0 auto;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee {
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  padding:28px 0; overflow:hidden; display:flex;
+}
+.marquee__track {
+  display:flex; align-items:center;
+  flex-shrink:0;
+  animation:marquee 32s linear infinite;
+  white-space:nowrap;
+}
+.marquee:hover .marquee__track { animation-play-state:paused; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+.marquee__wordmark {
+  font-family:var(--font-d);
+  font-size:18px; font-weight:400;
+  letter-spacing:0.08em; text-transform:uppercase;
+  color:rgba(242,242,240,0.7);
+  padding:0 40px; flex-shrink:0;
+  transition:color 0.2s;
+}
+.marquee__wordmark:hover { color:rgba(242,242,240,1); }
+[data-theme="light"] .marquee__wordmark { color:rgba(10,10,10,0.5); }
+[data-theme="light"] .marquee__wordmark:hover { color:rgba(10,10,10,0.9); }
+.marquee__logo {
+  height:24px; width:auto;
+  padding:0 40px; flex-shrink:0;
+  filter:brightness(0) invert(0.7);
+  transition:filter 0.2s;
+}
+.marquee__logo:hover { filter:brightness(0) invert(1); }
+[data-theme="light"] .marquee__logo { filter:brightness(0) invert(0.4); }
+[data-theme="light"] .marquee__logo:hover { filter:brightness(0) invert(0.1); }
+.marquee__sep {
+  width:4px; height:4px; border-radius:50%;
+  background:var(--purple); flex-shrink:0; display:inline-block;
+}
+.marquee__sep:nth-child(4n)   { background:var(--raspberry); }
+.marquee__sep:nth-child(6n)   { background:var(--mint); }
+.marquee__sep:nth-child(8n)   { background:var(--yellow); }
+.marquee__sep:nth-child(10n)  { background:var(--blue); }
+
+/* ============================================================
+   FEATURED — 375.studio style panels with parallax
+   ============================================================ */
+
+.featured {
+  background: var(--bg);
+}
+
+/* Heading row — sits above the panels */
+.featured__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 80px var(--pad) 48px;
+}
+
+.featured__title {
+  font-family: var(--font-d);
+  font-size: clamp(52px, 9vw, 140px);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--fg);
+}
+
+.featured__all {
+  font-size: 13px;
+  color: var(--grey-4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--grey-3);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  align-self: flex-end;
+  margin-bottom: 8px;
+}
+.featured__all:hover { color: var(--fg); border-color: var(--fg); }
+.featured__all svg { transition: transform 0.2s var(--ease); }
+.featured__all:hover svg { transform: translate(2px, -2px); }
+
+/* Individual panel */
+.feat-panel {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 90vh;
+  min-height: 560px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  /* Gap between panels — black strip visible like 375.studio */
+  margin-bottom: 12px;
+}
+.feat-panel:last-child { margin-bottom: 0; }
+
+/* Background image / gradient */
+.feat-panel__bg {
+  position: absolute;
+  /* 60% extra height — 30% top and bottom — gives parallax real travel room */
+  top: -30%;
+  bottom: -30%;
+  left: 0; right: 0;
+  z-index: 0;
+  will-change: transform;
+  /* No CSS transition — JS drives transform directly every frame */
+}
+.feat-panel__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CI Brand Gradient pairs per panel */
+/* Panel 1: Indigo → Purple (primary brand gradient) */
+.feat-panel--1 .feat-panel__bg {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(156,57,214,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 70%, rgba(222,43,137,0.2) 0%, transparent 45%),
+    linear-gradient(145deg, #1c1c1c 0%, #2B0D4F 50%, #1c1c1c 100%);
+}
+/* Panel 2: Yellow → Raspberry (warm brand gradient) */
+.feat-panel--2 .feat-panel__bg {
+  background:
+    radial-gradient(ellipse at 25% 50%, rgba(235,219,0,0.2) 0%, transparent 40%),
+    radial-gradient(ellipse at 60% 60%, rgba(222,43,137,0.35) 0%, transparent 45%),
+    linear-gradient(145deg, #1c1c1c 0%, #3a0a22 50%, #1c1c1c 100%);
+}
+/* Panel 3: Blue → Cool Mint (cool brand gradient) */
+.feat-panel--3 .feat-panel__bg {
+  background:
+    radial-gradient(ellipse at 35% 45%, rgba(74,122,237,0.3) 0%, transparent 45%),
+    radial-gradient(ellipse at 65% 65%, rgba(128,231,188,0.2) 0%, transparent 40%),
+    linear-gradient(145deg, #1c1c1c 0%, #0a1a2e 50%, #1c1c1c 100%);
+}
+
+/* Dark overlay — lighter in middle, heavy at bottom for text legibility */
+.feat-panel__overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(28,28,28,0.92) 0%,
+    rgba(28,28,28,0.45) 30%,
+    rgba(28,28,28,0.15) 60%,
+    rgba(28,28,28,0.1)  100%
+  );
+}
+
+/* Content sits bottom-left, number top-left */
+.feat-panel__inner {
+  position: absolute; inset: 0; z-index: 2;
+  padding: 40px var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feat-panel__num {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  align-self: flex-start;
+}
+.feat-panel--1 .feat-panel__num { color: var(--purple); }
+.feat-panel--2 .feat-panel__num { color: var(--raspberry); }
+.feat-panel--3 .feat-panel__num { color: var(--mint); }
+.feat-panel--4 .feat-panel__bg {
+  background:
+    radial-gradient(ellipse at 30% 45%, rgba(74,122,237,0.35) 0%, transparent 45%),
+    radial-gradient(ellipse at 65% 60%, rgba(156,57,214,0.2) 0%, transparent 40%),
+    linear-gradient(145deg, #1c1c1c 0%, #0d1030 50%, #1c1c1c 100%);
+}
+.feat-panel--4 .feat-panel__num { color: var(--blue); }
+
+.feat-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Giant project name — always visible, positioned bottom-left */
+.feat-panel__name {
+  font-family: var(--font-d);
+  font-size: clamp(52px, 8.5vw, 130px);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: white;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Tags — always visible below name */
+.feat-panel__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.feat-panel__tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--font-m);
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(4px);
+  transition: border-color 0.2s, color 0.2s;
+}
+.feat-panel:hover .feat-panel__tag {
+  border-color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.9);
+}
+
+/* Hover lift on images */
+.feat-panel:hover .feat-panel__bg {
+  filter: brightness(1.08);
+  transition: filter 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .feat-panel { height: 75vh; }
+  .feat-panel__name { font-size: clamp(44px, 12vw, 80px); }
+  .featured__title { font-size: clamp(48px, 14vw, 80px); }
+}
+
+/* ============================================================
+   SERVICES LIST — 375.studio style: headline + category columns
+   ============================================================ */
+.svc-list {
+  padding: 120px var(--pad);
+  border-top: 1px solid var(--rule);
+}
+
+.svc-list__top {
+  margin-bottom: 80px;
+}
+
+.svc-list__kicker {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.svc-list__kicker::after {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--purple);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.svc-list__headline {
+  font-family: var(--font-d);
+  font-size: clamp(32px, 5vw, 72px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  max-width: 22ch;
+}
+
+/* 3x2 grid on desktop, 2x3 on tablet, 1-col on mobile */
+.svc-list__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.svc-list__col {
+  padding: 40px 32px 40px 0;
+  border-bottom: 1px solid var(--rule);
+  /* Vertical dividers between columns */
+  border-right: 1px solid var(--rule);
+}
+/* Remove right border on last column per row */
+.svc-list__col:nth-child(3n) { border-right: none; }
+
+.svc-list__cat {
+  font-family: var(--font-d);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Category pill border like 375 */
+.svc-list__cat::after {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.svc-list__col:nth-child(1) .svc-list__cat::after { background: var(--purple); }
+.svc-list__col:nth-child(2) .svc-list__cat::after { background: var(--raspberry); }
+.svc-list__col:nth-child(3) .svc-list__cat::after { background: var(--mint); }
+.svc-list__col:nth-child(4) .svc-list__cat::after { background: var(--blue); }
+.svc-list__col:nth-child(5) .svc-list__cat::after { background: var(--yellow); }
+.svc-list__col:nth-child(6) .svc-list__cat::after { background: var(--raspberry); }
+
+.svc-list__items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.svc-list__items li {
+  font-size: 14px;
+  color: var(--grey-4);
+  font-weight: 300;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+.svc-list__items li:hover { color: var(--fg); }
+
+/* Left padding on non-first columns per row */
+.svc-list__col:nth-child(3n+2),
+.svc-list__col:nth-child(3n) {
+  padding-left: 32px;
+}
+
+@media (max-width: 900px) {
+  .svc-list__grid { grid-template-columns: 1fr 1fr; }
+  .svc-list__col:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .svc-list__col:nth-child(2n) { border-right: none; }
+  .svc-list__col:nth-child(2n) { padding-left: 32px; }
+  .svc-list__col:nth-child(2n+1) { padding-left: 0; }
+  .svc-list { padding: 80px var(--pad); }
+}
+
+@media (max-width: 600px) {
+  .svc-list__grid { grid-template-columns: 1fr; }
+  .svc-list__col { border-right: none !important; padding-left: 0 !important; }
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-band { padding:120px var(--pad); border-top:1px solid var(--rule); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.about-band__headline { font-family:var(--font-d); font-size:clamp(26px,3.2vw,48px); font-weight:300; line-height:1.08; letter-spacing:-.025em; color:var(--fg); }
+.about-band__headline em {
+  font-style:italic;
+  font-weight:200;
+  background:linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.about-band__copy { padding-top:6px; }
+.about-band__body { font-size:clamp(15px,1.2vw,17px); line-height:1.7; color:var(--grey-4); font-weight:300; margin-bottom:18px; }
+.about-band__link { display:inline-flex; align-items:center; gap:8px; font-size:14px; color:var(--grey-4); border-bottom:1px solid var(--grey-3); padding-bottom:2px; margin-top:14px; transition:color .2s,border-color .2s; }
+.about-band__link:hover { color:var(--fg); border-color:var(--fg); }
+.about-band__link svg { transition:transform .2s var(--ease); }
+.about-band__link:hover svg { transform:translate(2px,-2px); }
+@media (max-width:900px) { .about-band { grid-template-columns:1fr; gap:32px; padding:80px var(--pad); } }
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.stats { padding:80px var(--pad); border-top:1px solid var(--rule); }
+.stats__kicker { font-family:var(--font-m); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--grey-4); margin-bottom:48px; }
+.stats__grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--rule); }
+.stat { padding:36px 0; border-right:1px solid var(--rule); padding-right:28px; }
+.stat:last-child { border-right:none; }
+.stat:not(:first-child) { padding-left:28px; }
+.stat__num { font-family:var(--font-d); font-size:clamp(44px,5.5vw,90px); font-weight:300; letter-spacing:-.04em; line-height:1.12; margin-bottom:14px; }
+.stat:nth-child(1) .stat__num { color:var(--purple); }
+.stat:nth-child(2) .stat__num { color:var(--raspberry); }
+.stat:nth-child(3) .stat__num { color:var(--mint); }
+.stat:nth-child(4) .stat__num { color:var(--blue); }
+.stat__label { font-family:var(--font-m); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--grey-4); margin-bottom:7px; }
+.stat__desc { font-size:13px; color:var(--grey-3); line-height:1.5; font-weight:300; max-width:18ch; }
+@media (max-width:768px) { .stats__grid { grid-template-columns:1fr 1fr; } .stat { border-right:none; border-bottom:1px solid var(--rule); padding:28px 0; } .stat:not(:first-child){padding-left:0;} }
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.cta-banner { padding:140px var(--pad); text-align:center; border-top:1px solid var(--rule); overflow:visible; }
+.cta-banner__kicker { font-family:var(--font-m); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--grey-4); margin-bottom:44px; display:flex; align-items:center; justify-content:center; gap:12px; }
+.cta-banner__kicker::before,.cta-banner__kicker::after { content:''; width:28px; height:1px; background:var(--grey-3); flex-shrink:0; }
+.cta-banner__headline { font-family:var(--font-d); font-size:clamp(42px,7vw,112px); font-weight:300; line-height:1.1; letter-spacing:-.03em; color:var(--fg); max-width:800px; margin:0 auto 52px; overflow:visible; padding:0.15em 0.3em 0; }
+.cta-banner__headline em {
+  font-style:italic;
+  font-weight:200;
+  background:linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.cta-banner__actions { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+.btn-solid { display:inline-flex; align-items:center; gap:10px; padding:13px 26px; border-radius:999px; background:var(--fg); color:var(--bg); font-size:15px; transition:opacity .2s; }
+.btn-solid:hover { opacity:.85; }
+.btn-solid svg,.btn-outline svg { transition:transform .2s var(--ease); }
+.btn-solid:hover svg,.btn-outline:hover svg { transform:translate(2px,-2px); }
+.btn-outline { display:inline-flex; align-items:center; gap:10px; padding:12px 26px; border-radius:999px; border:1px solid var(--rule); color:var(--grey-4); font-size:15px; transition:border-color .2s,color .2s; }
+.btn-outline:hover { border-color:var(--grey-3); color:var(--fg); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer { border-top:1px solid var(--rule); padding:64px var(--pad) 32px; }
+.footer__grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; padding-bottom:64px; }
+.footer__logo { height:26px; width:auto; }
+[data-theme="light"] .footer__logo { filter:invert(1); }
+.footer__brand p { font-size:13px; color:var(--grey-4); line-height:1.65; max-width:24ch; margin-top:18px; font-weight:300; }
+.footer__col h5 { font-family:var(--font-m); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--grey-4); margin-bottom:18px; }
+.footer__col ul { display:flex; flex-direction:column; gap:9px; }
+.footer__col a { font-size:14px; color:var(--grey-4); transition:color .2s; font-weight:300; }
+.footer__col a:hover { color:var(--fg); }
+.footer__wordmark {
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+  overflow: visible;
+  margin: 20px 0;
+}
+.footer__wordmark-icon {
+  height: clamp(36px, 5vw, 56px);
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  mix-blend-mode: screen;
+}
+.footer__bottom { border-top:1px solid var(--rule); padding-top:22px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-family:var(--font-m); font-size:10px; color:var(--grey-3); letter-spacing:.1em; text-transform:uppercase; }
+@media (max-width:768px) { .footer__grid { grid-template-columns:1fr 1fr; } .footer__brand { grid-column:1/-1; } }
+
+/* ============================================================
+   GSAP HELPERS
+   ============================================================ */
+.gs-fade { opacity:0; }
+.gs-up   { opacity:0; transform:translateY(48px); }
+.gs-line { overflow: hidden; padding-top: 0.04em; padding-bottom: 0.02em; margin-top: -0.04em; margin-bottom: -0.02em; }
+/* Start visible — GSAP animates from translateY(100%), but if GSAP fails lines show */
+.gs-line-inner { display: block; transform: translateY(0); }
+/* JS adds .gs-animate class to body when GSAP is ready, then we hide for animation */
+body.gsap-ready .gs-line-inner { transform: translateY(105%); }
+
+/* ============================================================
+   NAV — fixed variant for subpages
+   ============================================================ */
+.nav--fixed {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  padding: 24px var(--pad);
+  background: rgba(28,28,28,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+  pointer-events: all;
+}
+
+/* Subpage nav links — centre aligned, replace wordmark */
+.nav__links-sub {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  pointer-events: all;
+}
+
+.nav__link-sub {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--grey-4);
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav__link-sub::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 1px;
+  background: var(--fg);
+  transition: width 0.3s var(--ease);
+}
+.nav__link-sub:hover,
+.nav__link-sub[aria-current="page"] { color: var(--fg); }
+.nav__link-sub:hover::after,
+.nav__link-sub[aria-current="page"]::after { width: 100%; }
+
+/* Dropdown wrapper */
+.nav__link-wrap {
+  position: relative;
+}
+
+/* Dropdown panel — hidden by default, shown on hover */
+.nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
+  min-width: 200px;
+}
+
+.nav__link-wrap:hover .nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav__dropdown-item {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--grey-4);
+  padding: 4px 0;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav__dropdown-item:hover { color: var(--fg); }
+
+@media (max-width: 768px) {
+  .nav__links-sub { display: none; }
+}
+
+/* ============================================================
+   WORKS PAGE — split layout
+   Left sticky, right scrolling cards
+   ============================================================ */
+.works-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+/* Left column — sticky intro */
+.works-page__left {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  padding: 80px var(--pad) 80px;
+}
+
+.works-page__kicker {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.works-page__kicker::after {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+.works-page__headline {
+  font-family: var(--font-d);
+  font-size: clamp(32px, 4vw, 60px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  margin-bottom: 32px;
+  max-width: 16ch;
+}
+
+.works-page__body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--grey-4);
+  font-weight: 300;
+  max-width: 36ch;
+}
+
+/* Right column — scrolling project cards */
+.works-page__right {
+  padding: 80px var(--pad) 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Individual work card */
+.works-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: var(--grey-1);
+  transition: border-color 0.3s, transform 0.4s var(--ease);
+}
+.works-card:hover {
+  border-color: var(--grey-3);
+  transform: translateY(-3px);
+}
+
+/* Card image */
+.works-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+}
+.works-card__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease);
+}
+.works-card:hover .works-card__img img {
+  transform: scale(1.04);
+}
+
+/* Placeholder gradient for cards without images */
+.works-card__img--placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.works-card__img--p1 {
+  background: linear-gradient(135deg, var(--grey-2) 0%, var(--indigo) 50%, var(--grey-2) 100%);
+}
+.works-card__img--p2 {
+  background: linear-gradient(135deg, var(--grey-2) 0%, rgba(74,122,237,0.3) 50%, var(--grey-2) 100%);
+}
+.works-card__img--p3 {
+  background: linear-gradient(135deg, var(--grey-2) 0%, rgba(222,43,137,0.25) 50%, var(--grey-2) 100%);
+}
+
+/* Card info */
+.works-card__info {
+  padding: 20px 24px;
+}
+
+.works-card__name {
+  font-family: var(--font-d);
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.works-card__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.works-card__tags span {
+  font-family: var(--font-m);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--grey-4);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  transition: border-color 0.2s, color 0.2s;
+}
+.works-card:hover .works-card__tags span {
+  border-color: var(--grey-3);
+  color: var(--grey-5);
+}
+
+@media (max-width: 900px) {
+  .works-page {
+    grid-template-columns: 1fr;
+  }
+  .works-page__left {
+    position: relative;
+    top: 0;
+    padding-bottom: 40px;
+  }
+  .works-page__right {
+    padding-left: var(--pad);
+  }
+}
+
+/* ============================================================
+   SERVICE PAGE — hero + body + discover list
+   Used by brand-identity.html and similar service subpages
+   ============================================================ */
+
+/* ── Hero ── */
+.svc-hero {
+  padding: 140px var(--pad) 80px;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Small carousel — top right */
+.svc-hero__carousel {
+  position: absolute;
+  top: 120px;
+  right: var(--pad);
+  width: clamp(240px, 28vw, 420px);
+}
+
+.svc-hero__carousel-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-radius: 10px;
+}
+.svc-hero__carousel-track::-webkit-scrollbar { display: none; }
+
+.svc-hero__slide {
+  flex-shrink: 0;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Placeholder gradient slides */
+.svc-hero__slide--p1 { background: linear-gradient(135deg, var(--indigo), var(--purple)); }
+.svc-hero__slide--p2 { background: linear-gradient(135deg, var(--grey-2), rgba(156,57,214,0.3)); }
+.svc-hero__slide--p3 { background: linear-gradient(135deg, rgba(222,43,137,0.3), var(--grey-2)); }
+.svc-hero__slide--p4 { background: linear-gradient(135deg, var(--grey-2), rgba(74,122,237,0.3)); }
+
+/* When real images are added:
+   <div class="svc-hero__slide" style="background-image:url('images/brand-01.jpg')"></div>
+*/
+
+.svc-hero__carousel-label {
+  font-family: var(--font-m);
+  font-size: 11px;
+  color: var(--grey-4);
+  margin-top: 12px;
+  text-align: right;
+  letter-spacing: 0.02em;
+}
+
+/* Large headline */
+.svc-hero__headline {
+  font-family: var(--font-d);
+  font-size: clamp(36px, 5.5vw, 82px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  max-width: 18ch;
+}
+
+.svc-hero__headline em {
+  font-style: italic;
+  font-weight: 200;
+  background: linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Category label — right aligned */
+.svc-hero__cat {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  position: absolute;
+  bottom: 80px;
+  right: var(--pad);
+}
+
+@media (max-width: 900px) {
+  .svc-hero__carousel {
+    position: relative;
+    top: 0; right: 0;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .svc-hero { min-height: auto; padding-top: 120px; }
+}
+
+/* ── Body text section ── */
+
+.svc-body__text {
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.7;
+  color: var(--grey-4);
+  font-weight: 300;
+  max-width: 72ch;
+}
+
+/* ── Discover services list ── */
+.svc-discover {
+  padding: 0 var(--pad) 120px;
+}
+
+.svc-discover__kicker {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 32px;
+}
+
+.svc-discover__list {
+  border-top: 1px solid var(--rule);
+}
+
+.svc-discover__item {
+  display: block;
+  text-align: center;
+  font-family: var(--font-d);
+  font-size: clamp(28px, 4.5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  padding: 32px 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  transition: color 0.2s, letter-spacing 0.4s var(--ease);
+}
+
+.svc-discover__item:hover {
+  color: var(--purple);
+  letter-spacing: 0.04em;
+}
+
+/* Auto-scroll carousel animation */
+@keyframes carousel-auto {
+  0%   { scroll-left: 0; }
+  25%  { scroll-left: 100%; }
+  50%  { scroll-left: 200%; }
+  75%  { scroll-left: 300%; }
+  100% { scroll-left: 0; }
+}
+
+/* ============================================================
+   SERVICE PAGE — hero, body, carousel, services rows
+   ============================================================ */
+
+/* Hero — large headline left, floating image top right */
+.svc-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: start;
+  padding: 160px var(--pad) 80px;
+  min-height: 80vh;
+}
+
+.svc-hero__kicker {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.svc-hero__kicker::after {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+.svc-hero__headline {
+  font-family: var(--font-d);
+  font-size: clamp(36px, 5.5vw, 80px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  max-width: 18ch;
+}
+.svc-hero__headline em {
+  font-style: italic;
+  font-weight: 200;
+  background: linear-gradient(90deg, var(--purple), var(--raspberry));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Floating image — top right, slightly overlapping nav area */
+.svc-hero__image {
+  position: relative;
+  margin-top: -40px;
+}
+
+.svc-hero__image img,
+.svc-hero__image-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  max-height: 520px;
+}
+
+.svc-hero__image video {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  max-height: 520px;
+}
+
+.svc-hero__image--landscape video {
+  aspect-ratio: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.svc-hero__image-placeholder--brand {
+  background: linear-gradient(160deg, var(--grey-2), var(--indigo) 50%, var(--grey-2));
+}
+
+.svc-hero__image-caption {
+  font-family: var(--font-m);
+  font-size: 11px;
+  color: var(--grey-4);
+  margin-top: 12px;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .svc-hero { grid-template-columns: 1fr; min-height: auto; padding-top: 120px; }
+  .svc-hero__image { margin-top: 20px; max-width: 60%; }
+}
+
+/* Body text — simple centred paragraph */
+.svc-body {
+  padding: 40px var(--pad) 100px;
+  max-width: 100ch;
+}
+.svc-body__text {
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.7;
+  color: var(--grey-4);
+  font-weight: 300;
+}
+
+/* Carousel — auto-scrolling horizontal strip */
+.svc-carousel {
+  padding: 0 0 100px;
+  overflow: hidden;
+}
+
+.svc-carousel__track {
+  display: flex;
+  gap: 16px;
+  animation: carousel-scroll 20s linear infinite;
+  width: max-content;
+}
+.svc-carousel:hover .svc-carousel__track {
+  animation-play-state: paused;
+}
+
+@keyframes carousel-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.svc-carousel__slide {
+  flex-shrink: 0;
+  width: clamp(280px, 30vw, 400px);
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.svc-carousel__slide img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark gradient at bottom so label text is readable over images */
+.svc-carousel__slide::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(28,28,28,0.8) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Placeholder gradients */
+.svc-carousel__slide--p1 { background: linear-gradient(135deg, var(--grey-2) 0%, rgba(156,57,214,0.3) 50%, var(--grey-2) 100%); }
+.svc-carousel__slide--p2 { background: linear-gradient(135deg, var(--grey-2) 0%, rgba(222,43,137,0.25) 50%, var(--grey-2) 100%); }
+.svc-carousel__slide--p3 { background: linear-gradient(135deg, var(--grey-2) 0%, rgba(74,122,237,0.3) 50%, var(--grey-2) 100%); }
+.svc-carousel__slide--p4 { background: linear-gradient(135deg, var(--grey-2) 0%, rgba(128,231,188,0.25) 50%, var(--grey-2) 100%); }
+.svc-carousel__slide--p5 { background: linear-gradient(135deg, var(--grey-2) 0%, rgba(235,219,0,0.2) 50%, var(--grey-2) 100%); }
+
+.svc-carousel__label {
+  font-family: var(--font-m);
+  font-size: 11px;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.06em;
+  position: relative;
+  z-index: 2;
+}
+
+/* Services rows — centred, large text, ruled lines */
+.svc-rows {
+  padding: 80px var(--pad) 120px;
+}
+
+.svc-rows__kicker {
+  font-family: var(--font-m);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-4);
+  margin-bottom: 40px;
+}
+
+.svc-rows__list {
+  border-top: 1px solid var(--rule);
+}
+
+.svc-rows__item {
+  font-family: var(--font-d);
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--fg);
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.3s, letter-spacing 0.4s var(--ease);
+  cursor: default;
+}
+.svc-rows__item:hover {
+  color: var(--purple);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   GLOBAL FIX — Afacad Flux ascender clipping
+   The font's ascenders extend beyond the em box at large sizes.
+   This adds breathing room to every heading element sitewide.
+   ============================================================ */
+h1, h2, h3,
+.hero__headline,
+.cta-banner__headline,
+.feat-panel__name,
+.featured__title,
+.svc-hero__headline,
+.statement__text,
+.about-band__headline,
+.svc-list__headline,
+.svc-rows__item,
+.stat__num,
+.works-page__headline {
+  padding-top: 0.15em;
+  padding-bottom: 0.1em;
+  overflow: visible !important;
+}
+
+/* Fix italic gradient text clipping globally.
+   Any em inside a large heading that uses background-clip:text
+   needs extra space so the italic slant doesn't get cut off. */
+.cta-banner__headline em,
+.svc-hero__headline em,
+.hero__headline .accent,
+.about-band__headline em,
+.about-copy__large em,
+.about-hero__headline em,
+.about-statement__line1,
+.contact-hero__headline em {
+  display: inline;
+  padding: 0.1em 0.2em 0.15em 0.05em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  margin-right: -0.05em;
+}
+
+/* ============================================================
+   NEXUS CI GRADIENT ACCENTS
+   Mint-teal-blue gradient from the CI letterhead and N-icon
+   ============================================================ */
+
+/* 1. Gradient bar at bottom of footer (matches letterhead) */
+.footer::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--ci-gradient-h);
+  margin-top: 40px;
+}
+
+/* 2. Nav CTA button hover glow */
+.nav__cta:hover {
+  box-shadow: 0 0 20px rgba(74,122,237,0.2), 0 0 40px rgba(128,231,188,0.1);
+}
+
+/* 3. Section divider lines use CI gradient */
+.cta-banner { border-top-color: transparent; position: relative; }
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: var(--pad); right: var(--pad);
+  height: 1px;
+  background: var(--ci-gradient-h);
+  opacity: 0.2;
+}
+
+/* 4. Featured panel hover - subtle CI glow on border */
+.feat-panel:hover {
+  box-shadow: 0 0 60px rgba(128,231,188,0.06), 0 0 120px rgba(74,122,237,0.04);
+}
+
+/* 5. Service page carousel labels - CI underline on hover */
+.svc-carousel__label::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--ci-gradient-h);
+  margin-top: 6px;
+  transition: width 0.4s var(--ease);
+}
+.svc-carousel__slide:hover .svc-carousel__label::after {
+  width: 100%;
+}
+
+/* 6. About page client grid cells - CI border glow on hover */
+.about-clients__cell:hover {
+  border-color: rgba(128,231,188,0.15);
+  box-shadow: inset 0 0 30px rgba(74,122,237,0.04);
+}
+
+/* 7. Stats section - CI gradient on number */
+.stat__num {
+  background: var(--ci-gradient-h);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* 8. Services grid category dot - alternate with CI colours */
+.svc-list__col:nth-child(3) .svc-list__cat::after { background: linear-gradient(135deg, #80E7BC, #6BC5E0); }
+.svc-list__col:nth-child(6) .svc-list__cat::after { background: linear-gradient(135deg, #4A7AED, #5B4AED); }
+
+/* 9. Form field focus uses CI colour */
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-image: var(--ci-gradient-h) 1;
+}
+
+/* 10. Scroll progress - add CI gradient variant */
+.hero__scroll-hint::after {
+  background: var(--ci-gradient);
+}
+
+/* 11. Contact map band - subtle CI top border */
+.contact-map {
+  border-top: 1px solid transparent;
+  border-image: var(--ci-gradient-h) 1;
+  border-image-slice: 1;
+  border-image-width: 1px 0 0 0;
+}
+
+/* ============================================================
+   NEXUS N-ICON BRANDING ACCENTS
+   The gradient N icon from the CI, used as watermarks and accents
+   ============================================================ */
+
+/* Large N watermark in hero */
+.hero__n-watermark {
+  position: absolute;
+  right: -5%;
+  bottom: -10%;
+  width: clamp(300px, 45vw, 600px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Footer N icon - centred, subtle */
+.footer__n-icon {
+  display: block;
+  width: 60px;
+  margin: 0 auto 40px;
+  opacity: 0.7;
+  transition: opacity 0.4s, transform 0.4s var(--ease);
+}
+.footer__n-icon:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* CTA banner N accent */
+.cta-banner__n-accent {
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(300px, 40vw, 550px);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* About page statement N */
+.about-statement__n {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(250px, 35vw, 500px);
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Service page hero N accent */
+.svc-hero__n-accent {
+  position: absolute;
+  right: -10%;
+  top: -15%;
+  width: clamp(200px, 30vw, 400px);
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floating N in featured section */
+.featured__n-float {
+  position: absolute;
+  right: 5%;
+  top: 40px;
+  width: clamp(80px, 10vw, 140px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Page load transition — CI colour bands that slide away -->
+
+
+<section class="hero" id="home">
+  <img class="hero__n-watermark" src="images/nm-icon-gradient.svg" alt="" aria-hidden="true">
+
+  <!-- Nav sits inside hero so it scrolls away with it -->
+  <nav class="nav">
+    <a class="nav__brand" href="index.html">
+      <img class="nav__logo" src="images/logo.svg" alt="Nexus Media">
+    </a>
+    <span class="nav__wordmark">Nexus Media</span>
+    <div class="nav__right">
+      <a class="nav__cta" href="contact.html">Let's Create</a>
+    </div>
+  </nav>
+
+  <!-- Floating service columns — mid-hero, scroll away with page -->
+  <div class="nav__col nav__col--left">
+    <a class="nav__col-link" href="services-brand.html">Brand Identity</a>
+    <a class="nav__col-link" href="services-digital.html">Digital Marketing</a>
+    <a class="nav__col-link" href="services-content.html">Content &amp; Studios</a>
+    <a class="nav__col-link" href="services-web.html">Web &amp; Product</a>
+    <a class="nav__col-link" href="services-events.html">Events &amp; Activations</a>
+    <a class="nav__col-link" href="services-influencer.html">Content Creator &amp; Community</a>
+  </div>
+  <div class="nav__col nav__col--right">
+    <a class="nav__col-link" href="work.html">Work</a>
+    <a class="nav__col-link" href="about.html">About</a>
+    <a class="nav__col-link" href="contact.html">Contact</a>
+  </div>
+
+  <!-- Hero background video + CI colour grade filter
+       Video: youtube.com/shorts/gfVVBz3BRI0
+       To swap: replace gfVVBz3BRI0 in both playlist= and the embed URL -->
+  <div class="hero__bg">
+    <!-- YouTube iframe -->
+    <div class="hero__yt-wrap">
+      <iframe
+        id="hero-yt"
+        src="https://www.youtube.com/embed/gfVVBz3BRI0?autoplay=1&mute=1&loop=1&playlist=gfVVBz3BRI0&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&disablekb=1&fs=0"
+        title="Hero background"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        style="pointer-events:none;">
+      </iframe>
+    </div>
+    <!-- CI colour grade — layered gradients mimicking the 375.studio filter effect -->
+    <div class="hero__grade"></div>
+    <!-- CI gradient fallback behind the iframe -->
+    <div class="hero__bg-fallback"></div>
+  </div>
+
+  <!-- Bottom content row -->
+  <div class="hero__bottom">
+    <h1 class="hero__headline">
+      <span class="gs-line"><span class="gs-line-inner">Built on</span></span>
+      <span class="gs-line"><span class="gs-line-inner"><em>community.</em></span></span>
+      <span class="gs-line"><span class="gs-line-inner">We know which</span></span>
+      <span class="gs-line"><span class="gs-line-inner"><span class="accent">ones matter.</span></span></span>
+    </h1>
+    <div class="hero__meta">
+      <div>Based in Johannesburg</div>
+      <div>Available Across Africa</div>
+      <div>Est. 2005</div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true"><div class="hero__scroll-line"></div></div>
+</section>
+
+<!-- ============================================================
+     STATEMENT — large centred text, word-by-word scroll reveal
+     Sits directly after hero on pure black background
+     ============================================================ -->
+<section class="statement" id="statement">
+  <h2 class="statement__text">
+    <span class="statement__word">We</span>
+    <span class="statement__word">are</span>
+    <span class="statement__word statement__word--accent">Nexus Media,</span>
+    <br>
+    <span class="statement__word">Communication,</span>
+    <span class="statement__word">Branding</span>
+    <span class="statement__word">&amp;</span>
+    <br>
+    <span class="statement__word">Digital</span>
+    <span class="statement__word statement__word--italic">Agency.</span>
+  </h2>
+  <p class="statement__body">
+    We're not your typical agency. We're the ones that grew up in the communities you're trying to reach.
+    A twenty-year legacy in the gaming, tech, pop culture and lifestyle industry ensures that Nexus Media
+    is uniquely positioned to advise your brand on best practices and implementation to effectively engage
+    authentically with communities through viable platforms, published content, bespoke activations and
+    digital media for consistent growth and sustainability.
+  </p>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__wordmark">AOC</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">AMD</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">ASUS</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Samsung</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Corsair</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Gigabyte</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">MSI</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Logitech</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">AOC</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">AMD</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">ASUS</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Samsung</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Corsair</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Gigabyte</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">MSI</span><span class="marquee__sep"></span>
+    <span class="marquee__wordmark">Logitech</span><span class="marquee__sep"></span>
+  </div>
+</div>
+
+
+
+<section class="featured" id="work" style="position:relative;">
+
+  <!-- Sticky heading — sits above first panel, scrolls away as panels come in -->
+  <div class="featured__head">
+    <h2 class="featured__title">Featured</h2>
+    <a class="featured__all" href="work.html">
+      View all
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg>
+    </a>
+  </div>
+
+  <!-- Panel 1 — AOC x Nexus: Tech expo photo -->
+  <a class="feat-panel feat-panel--1" href="work.html" data-cursor-color="purple">
+    <div class="feat-panel__bg">
+      <img src="images/work-01.jpg" alt="AOC x Nexus tech exhibition">
+    </div>
+    <div class="feat-panel__overlay"></div>
+    <div class="feat-panel__inner">
+      <span class="feat-panel__num">01</span>
+      <div class="feat-panel__body">
+        <h3 class="feat-panel__name">Rectron Summit</h3>
+        <div class="feat-panel__tags">
+          <span class="feat-panel__tag">Events</span>
+          <span class="feat-panel__tag">Activation</span>
+          <span class="feat-panel__tag">Exhibition</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Panel 2 — Cricut Activation: Brand activation photo -->
+  <a class="feat-panel feat-panel--2" href="work.html" data-cursor-color="raspberry">
+    <div class="feat-panel__bg">
+      <img src="images/work-02.jpg" alt="Cricut brand activation">
+    </div>
+    <div class="feat-panel__overlay"></div>
+    <div class="feat-panel__inner">
+      <span class="feat-panel__num">02</span>
+      <div class="feat-panel__body">
+        <h3 class="feat-panel__name">Cricut x Comic Con</h3>
+        <div class="feat-panel__tags">
+          <span class="feat-panel__tag">Brand Activation</span>
+          <span class="feat-panel__tag">Events</span>
+          <span class="feat-panel__tag">Community</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Panel 3 — MSI Launch: Product launch photo -->
+  <a class="feat-panel feat-panel--3" href="work.html" data-cursor-color="mint">
+    <div class="feat-panel__bg">
+      <img src="images/work-03.jpg" alt="MSI product launch event">
+    </div>
+    <div class="feat-panel__overlay"></div>
+    <div class="feat-panel__inner">
+      <span class="feat-panel__num">03</span>
+      <div class="feat-panel__body">
+        <h3 class="feat-panel__name">MSI Launch</h3>
+        <div class="feat-panel__tags">
+          <span class="feat-panel__tag">Product Launch</span>
+          <span class="feat-panel__tag">Events</span>
+          <span class="feat-panel__tag">Media</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Panel 4 - TaskCalendar: SaaS product build -->
+  <a class="feat-panel feat-panel--4" href="work.html" data-cursor-color="blue">
+    <div class="feat-panel__bg" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#0d1030 0%,#1a0a30 50%,#0d1030 100%);">
+      <span style="font-family:var(--font-d);font-size:clamp(32px,4vw,64px);font-weight:300;letter-spacing:-0.03em;color:rgba(255,255,255,0.12);text-align:center;line-height:1.1;">TaskCalendar<br>App</span>
+    </div>
+    <div class="feat-panel__overlay"></div>
+    <div class="feat-panel__inner">
+      <span class="feat-panel__num">04</span>
+      <div class="feat-panel__body">
+        <h3 class="feat-panel__name">TaskCalendar</h3>
+        <div class="feat-panel__tags">
+          <span class="feat-panel__tag">SaaS</span>
+          <span class="feat-panel__tag">Web App</span>
+          <span class="feat-panel__tag">Product Design</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</section>
+
+<!-- ============================================================
+     SERVICES - 375.studio style: headline + 3-column category grid
+     ============================================================ -->
+<section class="svc-list" id="services">
+  <div class="svc-list__top">
+    <p class="svc-list__kicker gs-fade">Services</p>
+    <h2 class="svc-list__headline gs-up">
+      We connect brands to audiences through six core disciplines, each one built on twenty years of doing it for real.
+    </h2>
+  </div>
+
+  <div class="svc-list__grid">
+    <!-- Column 1 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Digital Development</h3>
+      <ul class="svc-list__items">
+        <li>App Development</li>
+        <li>Website Development</li>
+        <li>UX / UI Design</li>
+        <li>E-Commerce</li>
+        <li>SEO</li>
+        <li>Information Architecture</li>
+        <li>Gamification</li>
+      </ul>
+    </div>
+    <!-- Column 2 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Business Development</h3>
+      <ul class="svc-list__items">
+        <li>Brand Strategy</li>
+        <li>Brand Architecture</li>
+        <li>Product Development</li>
+        <li>Product Packaging</li>
+        <li>CI Development & Design</li>
+        <li>Solutions Development</li>
+        <li>New Business Consultation</li>
+      </ul>
+    </div>
+    <!-- Column 3 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Media & Content Creation</h3>
+      <ul class="svc-list__items">
+        <li>Video Production</li>
+        <li>Product Shoots</li>
+        <li>3D Design</li>
+        <li>Editorial & Copywriting</li>
+        <li>AI Prompt Creation</li>
+        <li>Content Strategy</li>
+        <li>Media Liaison</li>
+      </ul>
+    </div>
+    <!-- Column 4 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Agency Consultation</h3>
+      <ul class="svc-list__items">
+        <li>Brand Assessment</li>
+        <li>Campaign Management</li>
+        <li>Community Engagement</li>
+        <li>Social Media Strategy</li>
+        <li>Reporting & Analytics</li>
+        <li>Specialist Procurement</li>
+      </ul>
+    </div>
+    <!-- Column 5 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Publishing & Digital Marketing</h3>
+      <ul class="svc-list__items">
+        <li>Brand Engagement</li>
+        <li>Content Management</li>
+        <li>Digital Publishing</li>
+        <li>Social Media Management</li>
+        <li>Digital Advertising</li>
+        <li>Digital Campaigns</li>
+        <li>Campaign Performance</li>
+      </ul>
+    </div>
+    <!-- Column 6 -->
+    <div class="svc-list__col gs-up">
+      <h3 class="svc-list__cat">Events</h3>
+      <ul class="svc-list__items">
+        <li>Corporate Events</li>
+        <li>Trade Shows</li>
+        <li>Product Launches</li>
+        <li>Exhibitions</li>
+        <li>Pop-Up Activations</li>
+        <li>Brand Workshops</li>
+        <li>Event Management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="about-band" id="about">
+  <div class="draw-line" style="position:absolute;top:0;left:var(--pad);right:var(--pad)"></div>
+  <div class="gs-up">
+    <h2 class="about-band__headline">Nexus Media <em>pride ourselves</em> in being a small agile team that pulls off the <em>exceptional.</em> Reach out to see how our team can do that for your brand too.</h2>
+  </div>
+  <div class="about-band__copy gs-up">
+    <p class="about-band__body">We started in 2005 as a pop-culture publication run out of a Randburg living room, covering gaming, comics and tech for South African readers who were not being served anywhere else.</p>
+    <p class="about-band__body">The publication became a community. The community became an audience. The audience became a network. And along the way, we figured out how to help brands plug into all of it, without making it weird.</p>
+    <p class="about-band__body">Small team. We like it that way. Fewer clients, better work, more sleep for everyone.</p>
+    <a class="about-band__link" href="about.html">Read the full story <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg></a>
+  </div>
+</section>
+
+<section class="stats" id="stats">
+  <div class="draw-line" style="margin-bottom:48px"></div>
+  <p class="stats__kicker gs-fade">By the numbers</p>
+  <div class="stats__grid">
+    <div class="stat gs-up"><div class="stat__num"><span data-count="20" data-suffix="+">0</span></div><div class="stat__label">Years in the game</div><div class="stat__desc">Operating since 2005, before creator economy was a phrase.</div></div>
+    <div class="stat gs-up"><div class="stat__num"><span data-count="240" data-suffix="+">0</span></div><div class="stat__label">Brands shipped</div><div class="stat__desc">From full rebrands to one-night activations.</div></div>
+    <div class="stat gs-up"><div class="stat__num"><span data-count="58" data-suffix="M">0</span></div><div class="stat__label">Monthly reach</div><div class="stat__desc">Across owned and partner channels. Real people.</div></div>
+    <div class="stat gs-up"><div class="stat__num"><span data-count="12" data-suffix="">0</span></div><div class="stat__label">Industry awards</div><div class="stat__desc">The ones that actually mean something to us.</div></div>
+  </div>
+</section>
+
+<section class="cta-banner" id="contact-cta" style="position:relative;overflow:hidden;">
+  <img class="cta-banner__n-accent" src="images/nm-icon-gradient.svg" alt="" aria-hidden="true">
+  <div class="draw-line" style="max-width:200px;margin:0 auto 56px"></div>
+  <p class="cta-banner__kicker gs-fade">Ready when you are</p>
+  <h2 class="cta-banner__headline">Got a project that deserves <em>better than average?</em></h2>
+  <div class="cta-banner__actions gs-up">
+    <a class="btn-solid" href="contact.html">Start a project <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13L13 3M13 3H6M13 3v7"/></svg></a>
+    <a class="btn-outline" href="mailto:info@nexusmedia.co.za">info@nexusmedia.co.za</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img class="footer__logo" src="images/logo.svg" alt="Nexus Media">
+      <p>Genuine engagement. Authentic activations. A division of Nexus Popular Culture (Pty) Ltd.</p>
+    </div>
+    <div class="footer__col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h5>Studio</h5>
+      <ul>
+        <li>21 Harley Street</li>
+        <li>Ferndale, Randburg</li>
+        <li>Johannesburg</li>
+        <li><a href="tel:0117898215">(011) 789-8215</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="mailto:info@nexusmedia.co.za">info@nexusmedia.co.za</a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://nexushub.co.za" target="_blank" rel="noopener">Nexus Hub</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer__col"><h5>Legal</h5><ul><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="security.html">Security</a></li></ul></div>
+  </div>
+  <img class="footer__n-icon" src="images/nm-icon-gradient.svg" alt="" aria-hidden="true">
+  <div class="footer__bottom">
+    <span>2026 Nexus Popular Culture (Pty) Ltd</span>
+    <span>Johannesburg, ZA</span>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   NEXUS MEDIA - app.js v3
+   Smooth scroll engine + lerped animations
+   Inspired by 375.studio's scroll feel
+   ============================================================ */
+(function () {
+  'use strict';
+
+  /* ── SMOOTH SCROLL ENGINE ───────────────────────────────
+     Replaces native scroll with lerped smooth scrolling.
+     The entire page feels like it's gliding rather than
+     jumping. This is the #1 thing that makes 375.studio
+     feel premium.                                          */
+  const Smooth = {
+    current: 0,
+    target: 0,
+    ease: 0.078,     /* lower = smoother/laggier, 0.08 is 375-level */
+    running: false,
+
+    init() {
+      /* Only on desktop — mobile smooth scroll feels wrong */
+      if ('ontouchstart' in window || window.innerWidth < 900) return;
+
+      /* Hijack scroll wheel */
+      window.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        this.target += e.deltaY;
+        this.target = Math.max(0, Math.min(this.target, this.getMax()));
+      }, { passive: false });
+
+      /* Hijack keyboard arrows / pageup / pagedown */
+      window.addEventListener('keydown', (e) => {
+        /* Don't hijack keys when typing in form fields */
+        const tag = document.activeElement && document.activeElement.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+        const keys = { ArrowUp: -80, ArrowDown: 80, PageUp: -400, PageDown: 400, ' ': 400, Home: -Infinity, End: Infinity };
+        if (keys[e.key] !== undefined) {
+          e.preventDefault();
+          if (e.key === 'Home') this.target = 0;
+          else if (e.key === 'End') this.target = this.getMax();
+          else this.target = Math.max(0, Math.min(this.target + keys[e.key], this.getMax()));
+        }
+      });
+
+      /* Sync initial position */
+      this.current = window.scrollY;
+      this.target  = window.scrollY;
+
+      /* Sync if user clicks an anchor link */
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const id = a.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (el) {
+            e.preventDefault();
+            this.target = el.offsetTop;
+          }
+        });
+      });
+
+      this.running = true;
+      this.tick();
+    },
+
+    getMax() {
+      return document.documentElement.scrollHeight - window.innerHeight;
+    },
+
+    tick() {
+      const diff = this.target - this.current;
+      this.current += diff * this.ease;
+
+      /* Only write to DOM if value changed meaningfully */
+      if (Math.abs(diff) > 0.5) {
+        window.scrollTo(0, this.current);
+      }
+
+      requestAnimationFrame(() => this.tick());
+    }
+  };
+
+
+  /* ── THEME ─────────────────────────────────────────────── */
+  const root = document.documentElement;
+  root.setAttribute('data-theme', 'dark');
+
+  function updateThemeIcon() {} /* no-op — toggle removed */
+
+
+  /* ── PROGRESS BAR ───────────────────────────────────────── */
+  const bar = document.querySelector('.progress-bar');
+  function updateProgress() {
+    if (!bar) return;
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+
+
+  /* ── PAGE LOAD TRANSITION ─────────────────────────────────
+     ON LOAD: Colour bands cover the screen, then split apart.
+     ON EXIT: Clicking any internal link triggers bands sliding
+     back in, then navigates after animation completes.         */
+  function initPageTransition() {
+    const el = document.getElementById('page-transition');
+    if (!el) return;
+
+    /* Reset body opacity in case we arrived via exit transition */
+    document.body.style.opacity = '1';
+
+    /* Show transition bands, then animate them away */
+    el.classList.add('is-active');
+
+    /* ENTRANCE - bands split apart */
+    setTimeout(() => { el.classList.add('is-exiting'); }, 200);
+    setTimeout(() => { el.classList.add('is-done'); el.classList.remove('is-active'); }, 1500);
+
+    /* ── BACK/FORWARD CACHE FIX - reset on bfcache restore ── */
+    window.addEventListener('pageshow', (e) => {
+      if (e.persisted) {
+        el.classList.remove('is-entering', 'is-active');
+        el.classList.add('is-exiting', 'is-done');
+        el.style.display = '';
+        document.body.style.opacity = '1';
+      }
+    });
+
+    /* ── EXIT - intercept internal link clicks ── */
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href]');
+      if (!link) return;
+
+      const href = link.getAttribute('href');
+      if (!href ||
+          href.startsWith('#') ||
+          href.startsWith('http') ||
+          href.startsWith('mailto') ||
+          href.startsWith('tel') ||
+          link.target === '_blank') return;
+
+      e.preventDefault();
+
+      /* Reset transition element for exit */
+      el.classList.remove('is-exiting', 'is-done');
+      el.style.display = 'flex';
+
+      /* Bands slide in immediately — no body fade, just the bands */
+      el.classList.add('is-entering');
+
+      /* Navigate after bands fully cover the screen */
+      setTimeout(() => {
+        window.location.href = href;
+      }, 700);
+    });
+  }
+
+
+  /* ── ACTIVE NAV ─────────────────────────────────────────── */
+  function markActive() {
+    const page = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav__link').forEach(l => {
+      if (l.getAttribute('href') === page) l.setAttribute('aria-current', 'page');
+    });
+  }
+
+
+  /* ── MARQUEE ────────────────────────────────────────────── */
+  function initMarquee() {
+    document.querySelectorAll('.marquee').forEach(m => {
+      m.addEventListener('mouseenter', () =>
+        m.querySelectorAll('.marquee__track').forEach(t => t.style.animationPlayState = 'paused'));
+      m.addEventListener('mouseleave', () =>
+        m.querySelectorAll('.marquee__track').forEach(t => t.style.animationPlayState = 'running'));
+    });
+  }
+
+
+  /* ── COUNT-UP ───────────────────────────────────────────── */
+  const countObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseFloat(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const dur = 2200, start = performance.now();
+      function step(now) {
+        const t = Math.min(1, (now - start) / dur);
+        /* Expo ease out — slow start, dramatic end */
+        const ease = 1 - Math.pow(1 - t, 4);
+        el.textContent = (target % 1 === 0 ? Math.round(target * ease) : (target * ease).toFixed(1)) + suffix;
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      countObs.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+
+
+  /* ── HERO LINE ENTRANCE ─────────────────────────────────── 
+     Slower, more dramatic than before. 1.4s per line with
+     heavy stagger. Lines clip up with a custom expo curve.   */
+  function initHeroLines() {
+    const lines = document.querySelectorAll('.gs-line-inner');
+    lines.forEach((el, i) => {
+      el.style.transform   = 'translateY(110%)';
+      el.style.display     = 'block';
+      /* Delayed by 0.8s so lines appear after the transition bands clear */
+      el.style.transition  = `transform 1.4s cubic-bezier(0.22, 1, 0.36, 1) ${0.8 + i * 0.18}s`;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        el.style.transform = 'translateY(0)';
+      }));
+    });
+
+    /* Fade in nav columns and meta after headline lands */
+    const delayed = document.querySelectorAll('.nav__col-link, .hero__meta');
+    delayed.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(14px)';
+      el.style.transition = `opacity 1s cubic-bezier(0.22,1,0.36,1) ${1.5 + i * 0.08}s, transform 1s cubic-bezier(0.22,1,0.36,1) ${1.5 + i * 0.08}s`;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }));
+    });
+  }
+
+
+  /* ── HERO SMOKE-OUT — lerped clipPath ────────────────────
+     Instead of directly setting clipPath on scroll (jerky),
+     we lerp toward the target value at 60fps.               */
+  function initHeroSmoke() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    const headline = hero.querySelector('.hero__headline');
+    const meta     = hero.querySelector('.hero__meta');
+    const cols     = hero.querySelectorAll('.nav__col');
+
+    let clipCurrent = 0;
+    let opCurrent   = 1;
+
+    function tick() {
+      const rect   = hero.getBoundingClientRect();
+      const total  = rect.height;
+      const scrolled = Math.max(0, -rect.top);
+      const clipTarget = Math.min(100, (scrolled / total) * 110);
+      const opTarget   = Math.max(0, 1 - (scrolled / (total * 0.35)));
+
+      /* Lerp both values */
+      clipCurrent += (clipTarget - clipCurrent) * 0.1;
+      opCurrent   += (opTarget   - opCurrent)   * 0.1;
+
+      hero.style.clipPath = `inset(0 0 ${clipCurrent.toFixed(1)}% 0)`;
+      if (headline) headline.style.opacity = opCurrent.toFixed(3);
+      if (meta)     meta.style.opacity     = opCurrent.toFixed(3);
+      cols.forEach(c => c.style.opacity = opCurrent.toFixed(3));
+
+      requestAnimationFrame(tick);
+    }
+
+    tick();
+  }
+
+
+  /* ── STATEMENT WORD LIGHTING — lerped opacity ───────────
+     Each word lerps from dim to lit based on scroll position.
+     The lerp makes the transition feel organic rather than
+     mechanical on/off.                                       */
+  function initStatementWords() {
+    const words = Array.from(document.querySelectorAll('.statement__word'));
+    const body  = document.querySelector('.statement__body');
+    if (!words.length) return;
+
+    /* Per-word state */
+    const state = words.map(() => ({ current: 0, target: 0 }));
+    let bodyRevealed = false;
+
+    function tick() {
+      const vh = window.innerHeight;
+      const triggerZone = vh * 0.7;
+
+      words.forEach((word, i) => {
+        const rect = word.getBoundingClientRect();
+        const mid  = rect.top + rect.height / 2;
+        /* Target: 1 when above trigger, 0 when below */
+        state[i].target = mid < triggerZone ? 1 : 0;
+        /* Lerp */
+        state[i].current += (state[i].target - state[i].current) * 0.06;
+
+        const val = state[i].current;
+        const isAccent = word.classList.contains('statement__word--accent');
+        if (isAccent) {
+          word.style.opacity = (0.22 + val * 0.78).toFixed(3);
+        } else {
+          const r = 242, g = 242, b = 240;
+          const a = (0.22 + val * 0.73).toFixed(3);
+          word.style.color = `rgba(${r},${g},${b},${a})`;
+        }
+      });
+
+      /* Body reveal — lerp opacity */
+      if (body) {
+        const allLit = state.every(s => s.current > 0.8);
+        const bTarget = allLit ? 1 : 0;
+        const bCurrent = parseFloat(body.style.opacity) || 0;
+        const bNext = bCurrent + (bTarget - bCurrent) * 0.04;
+        body.style.opacity   = bNext.toFixed(3);
+        body.style.transform = `translateY(${((1 - bNext) * 20).toFixed(1)}px)`;
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    tick();
+  }
+
+
+  /* ── FEATURED PANELS — strong lerped parallax ───────────
+     Background moves at ~50% scroll speed with heavy lerp.
+     The slow catch-up is what gives 375.studio its weight.   */
+  function initFeatured() {
+    const panels = document.querySelectorAll('.feat-panel');
+    if (!panels.length) return;
+
+    const state = Array.from(panels).map(() => ({ current: 0, target: 0 }));
+
+    function tick() {
+      const vh = window.innerHeight;
+
+      panels.forEach((panel, i) => {
+        const rect = panel.getBoundingClientRect();
+        const s = state[i];
+        const panelCentre = rect.top + rect.height / 2;
+        const norm = (panelCentre - vh / 2) / vh;
+        s.target = norm * 30; /* 30% travel */
+        /* Very slow lerp — 0.04 gives heavy, cinematic lag */
+        s.current += (s.target - s.current) * 0.04;
+
+        const bg = panel.querySelector('.feat-panel__bg');
+        if (bg) {
+          bg.style.transform = `translateY(${s.current.toFixed(2)}%) scale(1.02)`;
+        }
+      });
+
+      requestAnimationFrame(tick);
+    }
+
+    tick();
+  }
+
+
+  /* ── SCROLL REVEALS — longer, smoother ──────────────────
+     1.2s duration, heavier easing, bigger travel distance.   */
+  function initReveals() {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.style.transition = 'opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1)';
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -80px 0px' });
+
+    document.querySelectorAll('.gs-up').forEach(el => {
+      el.style.opacity   = '0';
+      el.style.transform = 'translateY(44px)';
+      obs.observe(el);
+    });
+
+    document.querySelectorAll('.gs-fade').forEach(el => {
+      el.style.opacity = '0';
+      const obs2 = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.transition = 'opacity 1.4s cubic-bezier(0.22,1,0.36,1)';
+            e.target.style.opacity = '1';
+            obs2.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      obs2.observe(el);
+    });
+  }
+
+
+  /* ── FEATURED TITLE — character spread ──────────────────
+     "Featured" starts with letters compressed, spreads
+     to normal spacing as it scrolls into view.              */
+  function initFeaturedTitle() {
+    const title = document.querySelector('.featured__title');
+    if (!title) return;
+
+    /* Wrap each character in a span */
+    const text = title.textContent;
+    title.innerHTML = '';
+    text.split('').forEach(char => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.style.display = 'inline-block';
+      span.style.transition = 'none';
+      title.appendChild(span);
+    });
+
+    const chars = title.querySelectorAll('span');
+    let current = -0.15; /* em — starts compressed */
+    let target  = -0.15;
+
+    function tick() {
+      const rect = title.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const progress = 1 - Math.max(0, Math.min(1, (rect.top - vh * 0.3) / (vh * 0.5)));
+      target = -0.15 + progress * 0.19; /* -0.15 to 0.04em */
+      current += (target - current) * 0.06;
+      title.style.letterSpacing = current.toFixed(4) + 'em';
+
+      /* Also fade + scale */
+      const op = 0.3 + progress * 0.7;
+      title.style.opacity = op.toFixed(3);
+
+      requestAnimationFrame(tick);
+    }
+    tick();
+  }
+
+
+  /* ── ABOUT HEADLINE — word-by-word rise ─────────────────
+     Walks the DOM tree to split words while preserving <em>
+     tags that wrap multiple words.                           */
+  function initAboutWords() {
+    const headline = document.querySelector('.about-band__headline');
+    if (!headline) return;
+
+    const fragments = [];
+
+    /* Walk child nodes — can be text nodes or <em> elements */
+    headline.childNodes.forEach(node => {
+      if (node.nodeType === 3) {
+        /* Text node — split into words */
+        node.textContent.split(/\s+/).filter(Boolean).forEach(word => {
+          fragments.push({ word, isEm: false });
+        });
+      } else if (node.nodeName === 'EM') {
+        /* <em> node — split into words but flag as em */
+        node.textContent.split(/\s+/).filter(Boolean).forEach(word => {
+          fragments.push({ word, isEm: true });
+        });
+      }
+    });
+
+    /* Rebuild with spans */
+    headline.innerHTML = fragments.map(f => {
+      const cls = f.isEm ? 'about-word about-word--em' : 'about-word';
+      const inner = f.isEm ? `<em>${f.word}</em>` : f.word;
+      return `<span class="${cls}" style="display:inline-block;opacity:0;transform:translateY(32px);margin-right:0.2em">${inner}</span>`;
+    }).join('');
+
+    const words = headline.querySelectorAll('.about-word');
+    let revealed = false;
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting || revealed) return;
+        revealed = true;
+        words.forEach((w, i) => {
+          const delay = i * 0.07 + (w.classList.contains('about-word--em') ? 0.12 : 0);
+          w.style.transition = `opacity 1.3s cubic-bezier(0.22,1,0.36,1) ${delay}s, transform 1.3s cubic-bezier(0.22,1,0.36,1) ${delay}s`;
+          requestAnimationFrame(() => {
+            w.style.opacity = '1';
+            w.style.transform = 'translateY(0)';
+          });
+        });
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    obs.observe(headline);
+  }
+
+
+  /* ── STAT NUMBERS — scale up effect ─────────────────────
+     Numbers grow from 85% to 100% scale as they count up,
+     adding physical weight to the reveal.                    */
+  function initStatScale() {
+    const nums = document.querySelectorAll('.stat__num');
+    if (!nums.length) return;
+
+    nums.forEach(num => {
+      num.style.transform = 'scale(0.85)';
+      num.style.opacity = '0';
+      num.style.transformOrigin = 'left bottom';
+    });
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.style.transition = 'transform 1.6s cubic-bezier(0.22,1,0.36,1), opacity 1.2s cubic-bezier(0.22,1,0.36,1)';
+        e.target.style.transform = 'scale(1)';
+        e.target.style.opacity = '1';
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.3 });
+
+    nums.forEach(n => obs.observe(n));
+  }
+
+
+  /* ── CTA HEADLINE — 3D tilt entrance ────────────────────
+     Slides up with a slight rotateX that flattens on arrival.
+     Very 375.studio.                                         */
+  function initCtaTilt() {
+    const headline = document.querySelector('.cta-banner__headline');
+    if (!headline) return;
+
+    headline.style.transform = 'translateY(52px)';
+    headline.style.opacity = '0';
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.style.transition = 'transform 1.6s cubic-bezier(0.22,1,0.36,1), opacity 1.4s cubic-bezier(0.22,1,0.36,1)';
+        e.target.style.transform = 'translateY(0)';
+        e.target.style.opacity = '1';
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.1 });
+    obs.observe(headline);
+  }
+
+
+  /* ── FOOTER WORDMARK — horizontal slide ─────────────────
+     "Nexus" slides from right to its position as you reach
+     the footer. Lerped to scroll.                            */
+  function initFooterSlide() {
+    const mark = document.querySelector('.footer__wordmark');
+    if (!mark) return;
+
+    let currentScale = 0.85;
+    let currentOp = 0;
+
+    function tick() {
+      const rect = mark.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const progress = 1 - Math.max(0, Math.min(1, (rect.top - vh) / (vh * 0.5)));
+      const targetScale = 0.85 + progress * 0.15;
+      const targetOp = progress;
+      currentScale += (targetScale - currentScale) * 0.05;
+      currentOp += (targetOp - currentOp) * 0.05;
+      mark.style.transform = `scale(${currentScale.toFixed(4)})`;
+      mark.style.opacity = (currentOp * 0.6).toFixed(4); /* max 0.6 — visible but not dominant */
+      requestAnimationFrame(tick);
+    }
+    tick();
+  }
+
+
+  /* ── STAT STAGGER — each column rises independently ──────*/
+  function initStatStagger() {
+    const stats = document.querySelectorAll('.stat');
+    if (!stats.length) return;
+
+    stats.forEach((stat, i) => {
+      stat.style.opacity = '0';
+      stat.style.transform = 'translateY(40px)';
+    });
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        stats.forEach((stat, i) => {
+          setTimeout(() => {
+            stat.style.transition = 'opacity 1.4s cubic-bezier(0.22,1,0.36,1), transform 1.4s cubic-bezier(0.22,1,0.36,1)';
+            stat.style.opacity = '1';
+            stat.style.transform = 'translateY(0)';
+          }, i * 120);
+        });
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.1 });
+
+    const grid = document.querySelector('.stats__grid');
+    if (grid) obs.observe(grid);
+  }
+
+
+  /* ── CTA ACTIONS — buttons stagger after headline ──────── */
+  function initCtaActions() {
+    const actions = document.querySelector('.cta-banner__actions');
+    if (!actions) return;
+
+    const items = actions.querySelectorAll('a');
+    items.forEach((item, i) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(24px)';
+    });
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        items.forEach((item, i) => {
+          setTimeout(() => {
+            item.style.transition = 'opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1)';
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+          }, 400 + i * 100); /* 400ms delay — waits for headline tilt to land */
+        });
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.1 });
+
+    obs.observe(actions);
+  }
+
+
+  /* ── FOOTER REVEALS — columns + logo stagger ───────────── */
+  function initFooterReveal() {
+    const footer = document.querySelector('.footer');
+    if (!footer) return;
+
+    /* Logo scale */
+    const logo = footer.querySelector('.footer__logo');
+    if (logo) {
+      logo.style.opacity = '0';
+      logo.style.transform = 'scale(0.88)';
+      logo.style.transformOrigin = 'left center';
+    }
+
+    /* Each column slides up */
+    const cols = footer.querySelectorAll('.footer__col');
+    cols.forEach((col, i) => {
+      col.style.opacity = '0';
+      col.style.transform = 'translateY(28px)';
+    });
+
+    /* Brand text */
+    const brandP = footer.querySelector('.footer__brand p');
+    if (brandP) {
+      brandP.style.opacity = '0';
+      brandP.style.transform = 'translateY(16px)';
+    }
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+
+        if (logo) {
+          logo.style.transition = 'opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1)';
+          logo.style.opacity = '1';
+          logo.style.transform = 'scale(1)';
+        }
+
+        if (brandP) {
+          setTimeout(() => {
+            brandP.style.transition = 'opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1)';
+            brandP.style.opacity = '1';
+            brandP.style.transform = 'translateY(0)';
+          }, 100);
+        }
+
+        cols.forEach((col, i) => {
+          setTimeout(() => {
+            col.style.transition = 'opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1)';
+            col.style.opacity = '1';
+            col.style.transform = 'translateY(0)';
+          }, 200 + i * 80);
+        });
+
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.05 });
+
+    obs.observe(footer);
+  }
+
+
+  /* ── SECTION LINE DRAWS — horizontal rules animate width ──
+     Any element with .draw-line starts at width:0 and draws
+     to width:100% as it enters the viewport.                 */
+  function initLineDraws() {
+    const lines = document.querySelectorAll('.draw-line');
+    if (!lines.length) return;
+
+    lines.forEach(line => {
+      line.style.width = '0';
+      line.style.height = '1px';
+      line.style.background = 'linear-gradient(90deg, #80E7BC, #6BC5E0, #4A7AED, #5B4AED)';
+      line.style.opacity = '0.4';
+      line.style.display = 'block';
+    });
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.style.transition = 'width 1.8s cubic-bezier(0.22,1,0.36,1)';
+        e.target.style.width = '100%';
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.05 });
+
+    lines.forEach(l => obs.observe(l));
+  }
+
+
+  /* ── SERVICE PAGE CAROUSEL — auto-scroll ─────────────────
+     Scrolls through slides every 3s with smooth scroll.      */
+  function initCarousel() {
+    const track = document.getElementById('brand-carousel');
+    if (!track) return;
+
+    const slides = track.querySelectorAll('.svc-hero__slide');
+    if (slides.length < 2) return;
+
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      track.scrollTo({
+        left: slides[current].offsetLeft,
+        behavior: 'smooth'
+      });
+    }, 3000);
+  }
+
+
+  /* ── INIT ───────────────────────────────────────────────── */
+  function init() {
+    updateThemeIcon();
+    updateProgress();
+    markActive();
+    initPageTransition();
+    initMarquee();
+    initHeroLines();
+    initHeroSmoke();
+    initStatementWords();
+    initReveals();
+    initFeatured();
+    initFeaturedTitle();
+    initAboutWords();
+    initStatScale();
+    initStatStagger();
+    initCtaTilt();
+    initCtaActions();
+    initFooterReveal();
+    initFooterSlide();
+    initLineDraws();
+    initCarousel();
+    Smooth.init();
+    document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
+
+    /* Keep progress bar in sync */
+    (function progressTick() {
+      updateProgress();
+      requestAnimationFrame(progressTick);
+    })();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+
+</script>
+</body>
+</html>
